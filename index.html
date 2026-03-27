@@ -11,6 +11,9 @@
   <meta property="og:image" content="https://urowellintegrativecare.com/assets/logo.png" />
   <meta property="og:url" content="https://urowellintegrativecare.com" />
   <link rel="icon" href="./assets/logo.png" type="image/png" />
+  <!-- UserWay Accessibility Widget -->
+  <script src="https://cdn.userway.org/widget.js" data-account="SQ44BBNmKC"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -1362,6 +1365,684 @@
       document.getElementById('mobileMenu').classList.remove('open');
     });
   });
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     UROWELL INTEGRATIVE CARE — AI CHATBOT
+     Adapted from Urology Center OC chatbot by Claude Code
+═══════════════════════════════════════════════════════════════ -->
+<style>
+  /* ── Chatbot Container ── */
+  #uw-chatbot-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 99999;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  /* ── Toggle Button ── */
+  #uw-chat-toggle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2D7D7D, #1a5c5c);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(45,125,125,0.45);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+  }
+  #uw-chat-toggle:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 28px rgba(45,125,125,0.55);
+  }
+  #uw-chat-toggle svg { width: 30px; height: 30px; fill: white; }
+  /* ── Badge ── */
+  .uw-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #c8a96e;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    animation: uwPulse 2s infinite;
+    border: 2px solid white;
+  }
+  @keyframes uwPulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+  /* ── Chat Window ── */
+  #uw-chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 390px;
+    height: 620px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 16px 56px rgba(0,0,0,0.18);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(45,125,125,0.15);
+  }
+  /* ── Chat Header ── */
+  #uw-chat-header {
+    background: linear-gradient(135deg, #2D7D7D, #1a5c5c);
+    color: white;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .uw-header-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: white;
+    padding: 4px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .uw-header-info { flex: 1; }
+  .uw-header-info h3 { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.2; }
+  .uw-header-info p { margin: 3px 0 0; font-size: 11.5px; opacity: 0.88; }
+  .uw-online-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #4ade80; display: inline-block;
+    margin-right: 5px; animation: uwPulse 2s infinite;
+  }
+  #uw-close-chat {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #uw-close-chat:hover { background: rgba(255,255,255,0.25); }
+  /* ── Messages ── */
+  #uw-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px;
+    background: #f7f9f9;
+    scroll-behavior: smooth;
+  }
+  #uw-messages::-webkit-scrollbar { width: 4px; }
+  #uw-messages::-webkit-scrollbar-track { background: transparent; }
+  #uw-messages::-webkit-scrollbar-thumb { background: #c8d8d8; border-radius: 4px; }
+  .uw-message { margin-bottom: 14px; display: flex; animation: uwSlideIn 0.3s ease; }
+  @keyframes uwSlideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .uw-message.bot { justify-content: flex-start; }
+  .uw-message.user { justify-content: flex-end; }
+  .uw-msg-content {
+    max-width: 78%;
+    padding: 11px 15px;
+    border-radius: 14px;
+    line-height: 1.5;
+    font-size: 13.5px;
+  }
+  .uw-message.bot .uw-msg-content {
+    background: white;
+    color: #1a2e2e;
+    border: 1px solid #dde8e8;
+    border-bottom-left-radius: 4px;
+  }
+  .uw-message.user .uw-msg-content {
+    background: linear-gradient(135deg, #2D7D7D, #1a5c5c);
+    color: white;
+    border-bottom-right-radius: 4px;
+  }
+  /* ── Quick Actions ── */
+  .uw-quick-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+  .uw-quick-btn {
+    background: white;
+    border: 1.5px solid #2D7D7D;
+    color: #2D7D7D;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12.5px;
+    font-weight: 600;
+    transition: all 0.25s;
+    font-family: inherit;
+  }
+  .uw-quick-btn:hover { background: #2D7D7D; color: white; }
+  /* ── Input ── */
+  #uw-input-bar {
+    padding: 14px 16px;
+    background: white;
+    border-top: 1px solid #e8eded;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  #uw-msg-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1.5px solid #dde8e8;
+    border-radius: 24px;
+    outline: none;
+    font-size: 13.5px;
+    font-family: inherit;
+    transition: border-color 0.25s;
+    background: #f7f9f9;
+  }
+  #uw-msg-input:focus { border-color: #2D7D7D; background: white; }
+  #uw-send-btn {
+    background: linear-gradient(135deg, #2D7D7D, #1a5c5c);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-shrink: 0;
+  }
+  #uw-send-btn:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(45,125,125,0.4); }
+  #uw-send-btn svg { fill: white; width: 18px; height: 18px; }
+  /* ── Typing ── */
+  .uw-typing {
+    display: flex; gap: 4px;
+    padding: 12px 15px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #dde8e8;
+    width: fit-content;
+    border-bottom-left-radius: 4px;
+  }
+  .uw-typing span {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #2D7D7D;
+    opacity: 0.5;
+    animation: uwTyping 1.4s infinite;
+  }
+  .uw-typing span:nth-child(2) { animation-delay: 0.2s; }
+  .uw-typing span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes uwTyping {
+    0%,60%,100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-8px); opacity: 1; }
+  }
+  /* ── Forms ── */
+  .uw-form-group { margin-bottom: 11px; }
+  .uw-form-group label { display: block; margin-bottom: 4px; font-size: 12px; color: #4a6060; font-weight: 600; }
+  .uw-form-group input,
+  .uw-form-group select,
+  .uw-form-group textarea {
+    width: 100%; padding: 8px 11px;
+    border: 1.5px solid #dde8e8;
+    border-radius: 9px;
+    font-size: 13px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    background: #f7f9f9;
+  }
+  .uw-form-group input:focus,
+  .uw-form-group select:focus,
+  .uw-form-group textarea:focus { border-color: #2D7D7D; background: white; }
+  .uw-form-group textarea { resize: vertical; min-height: 58px; }
+  .uw-submit-btn {
+    background: linear-gradient(135deg, #2D7D7D, #1a5c5c);
+    color: white; border: none;
+    padding: 10px 20px; border-radius: 9px;
+    cursor: pointer; font-size: 13.5px;
+    font-weight: 600; width: 100%;
+    transition: opacity 0.25s; font-family: inherit;
+  }
+  .uw-submit-btn:hover { opacity: 0.9; }
+  .uw-submit-btn:disabled { background: #aaa; cursor: not-allowed; }
+  /* ── Alerts ── */
+  .uw-success {
+    background: #e8f5f0; border: 1px solid #a8d8c8;
+    color: #1a5c3a; padding: 12px; border-radius: 10px; margin-top: 8px;
+    font-size: 13px; line-height: 1.5;
+  }
+  .uw-info {
+    background: #e8f4f4; border: 1px solid #a8d0d0;
+    color: #1a4040; padding: 12px; border-radius: 10px; margin-top: 8px;
+    font-size: 13px; line-height: 1.5;
+  }
+  /* ── Mobile ── */
+  @media (max-width: 480px) {
+    #uw-chat-window { width: 100vw; height: 100vh; bottom: 0; right: 0; border-radius: 0; }
+    #uw-chatbot-container { bottom: 16px; right: 16px; }
+  }
+</style>
+
+<div id="uw-chatbot-container">
+  <button id="uw-chat-toggle" aria-label="Open Urowell chat assistant">
+    <span class="uw-badge" aria-hidden="true">1</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+    </svg>
+  </button>
+  <div id="uw-chat-window" role="dialog" aria-label="Urowell chat assistant">
+    <div id="uw-chat-header">
+      <img class="uw-header-logo" src="./assets/logo.png" alt="Urowell logo" />
+      <div class="uw-header-info">
+        <h3>Urowell Integrative Care</h3>
+        <p><span class="uw-online-dot"></span>We're here to help! 🌿</p>
+      </div>
+      <button id="uw-close-chat" aria-label="Close chat">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+        </svg>
+      </button>
+    </div>
+    <div id="uw-messages" role="log" aria-live="polite"></div>
+    <div id="uw-input-bar">
+      <input type="text" id="uw-msg-input" placeholder="Type your message..." aria-label="Chat message input" />
+      <button id="uw-send-btn" aria-label="Send message">
+        <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  const KB = {
+    services: {
+      kw: ['service','offer','provide','treatment','procedure','what do you','what can'],
+      r: 'We offer comprehensive integrative urology and wellness services including Alma Duo (ED & pelvic health), FemiLift (women\'s wellness), Alma TED (hair restoration), PRP, peptide therapy (GLP-1, NAD+, PT-141, BPC-157), sexual wellness, regenerative medicine, and aesthetic treatments. Would you like details on any specific service?'
+    },
+    cherry: {
+      kw: ['cherry','financing','payment plan','monthly','afford','finance','pay over'],
+      r: 'We offer Cherry patient financing — apply in 60 seconds with just a soft credit check (no impact on your score). ~90% approval rate, 0% APR options available, plans from 6 weeks to 60 months. Merchant ID: AJK0BO. <a href="https://withcherry.com/apply?merchant_id=AJK0BO" target="_blank" style="color:#2D7D7D;font-weight:600;">Apply Now →</a>'
+    },
+    square: {
+      kw: ['square','credit card','pay now','full payment','visa','mastercard','apple pay','google pay'],
+      r: 'We accept all major credit cards, Apple Pay, and Google Pay through Square — secure, PCI DSS compliant processing. You can pay in full when booking your appointment through the app or at our office.'
+    },
+    membership: {
+      kw: ['membership','member','silver','gold','platinum','discount','rewards','elite'],
+      r: 'We have three membership tiers: Silver ($149/mo — 5% off + $25 credit), Gold ($299/mo — 10% off + $50 credit + priority booking), and Platinum ($499/mo — 15% off + $75 credit + dedicated concierge). Manage your membership in the Urowell Elite app!'
+    },
+    app: {
+      kw: ['app','mobile','download','iphone','android','ios','google play','apple store'],
+      r: 'The Urowell Elite app is available on both iOS (App Store) and Android (Google Play). Book services, earn rewards, manage your membership, access Cherry financing, and watch education videos — all in one place!'
+    },
+    peptides: {
+      kw: ['peptide','glp','semaglutide','nad','bpc','pt-141','kisspeptin','epithalon','peplogix','weight loss','testosterone'],
+      r: 'We partner with Peplogix to offer top-tier peptide products: GLP-1/Semaglutide (weight management), PT-141 (sexual wellness), NAD+ (energy & longevity), BPC-157 (recovery), Kisspeptin (testosterone support), Epithalon (anti-aging), and more. All prescribed by Dr. Fareed and shipped directly to you.'
+    },
+    almaDuo: {
+      kw: ['alma duo','shockwave','erectile','ed treatment','pelvic pain','impotence'],
+      r: 'Alma Duo uses low-intensity shockwave therapy (LiSWT) to treat erectile dysfunction and pelvic pain — non-invasive, medication-free, no downtime. It stimulates new blood vessel growth for natural, lasting improvement.'
+    },
+    femilift: {
+      kw: ['femilift','vaginal','feminine','incontinence','laxity','dryness','women\'s health'],
+      r: 'FemiLift is a minimally invasive CO₂ laser treatment addressing vaginal laxity, dryness, stress urinary incontinence, and intimacy discomfort. It promotes natural tissue regeneration with minimal downtime.'
+    },
+    almaTed: {
+      kw: ['hair','restoration','alma ted','hair loss','balding','thinning'],
+      r: 'Alma TED uses ultrasound-based technology with topical nutrients to stimulate hair regrowth — no needles, no surgery, no downtime. It enhances blood flow to hair follicles for natural, visible results.'
+    },
+    prp: {
+      kw: ['prp','platelet','p-shot','plasma','regenerative'],
+      r: 'PRP (Platelet-Rich Plasma) therapy uses your body\'s own healing factors to accelerate tissue regeneration. It can be combined with Alma Duo and FemiLift for enhanced outcomes in sexual wellness and hair restoration.'
+    },
+    appointment: {
+      kw: ['appointment','schedule','book','visit','see doctor','availability','consult'],
+      r: 'I can help you request an appointment! Our office will contact you within 24 hours to confirm. You can also call us directly at (714) 716-5959 or book through the Urowell Elite app.'
+    },
+    location: {
+      kw: ['location','address','where','directions','find you','office','parking'],
+      r: 'We\'re located at <strong>18800 Delaware St, Suite 750, Huntington Beach, CA 92648</strong>. Office hours: Monday–Friday, 9:00 AM – 5:00 PM. <a href="https://maps.google.com/?q=18800+Delaware+St+Suite+750+Huntington+Beach+CA+92648" target="_blank" style="color:#2D7D7D;">Get Directions →</a>'
+    },
+    hours: {
+      kw: ['hours','open','closed','time','when open','weekend'],
+      r: 'Office hours are Monday–Friday, 9:00 AM – 5:00 PM. Closed weekends. For urgent matters, call (714) 716-5959.'
+    },
+    contact: {
+      kw: ['phone','call','contact','reach','email','number'],
+      r: 'Call us at <a href="tel:7147165959" style="color:#2D7D7D;font-weight:600;">(714) 716-5959</a> during business hours (Mon–Fri, 9 AM–5 PM). You can also send a message through this chat and our team will respond within one business day.'
+    },
+    insurance: {
+      kw: ['insurance','coverage','plan','covered','copay','deductible'],
+      r: 'We accept most major insurance plans for general urology services. Our integrative wellness and cash-pay services (peptides, aesthetics, memberships) are not insurance-billed. Call (714) 716-5959 to verify your specific coverage.'
+    }
+  };
+
+  class UrowellBot {
+    constructor() {
+      this.isOpen = false;
+      this.history = [];
+      this.requests = JSON.parse(localStorage.getItem('uw_requests') || '[]');
+      this.init();
+    }
+
+    init() {
+      this.toggle = document.getElementById('uw-chat-toggle');
+      this.window = document.getElementById('uw-chat-window');
+      this.closeBtn = document.getElementById('uw-close-chat');
+      this.msgs = document.getElementById('uw-messages');
+      this.input = document.getElementById('uw-msg-input');
+      this.sendBtn = document.getElementById('uw-send-btn');
+      this.badge = document.querySelector('.uw-badge');
+
+      this.toggle.addEventListener('click', () => this.toggleChat());
+      this.closeBtn.addEventListener('click', () => this.toggleChat());
+      this.sendBtn.addEventListener('click', () => this.send());
+      this.input.addEventListener('keypress', e => { if (e.key === 'Enter') this.send(); });
+      this.greet();
+    }
+
+    toggleChat() {
+      this.isOpen = !this.isOpen;
+      this.window.style.display = this.isOpen ? 'flex' : 'none';
+      if (this.isOpen) {
+        this.badge.style.display = 'none';
+        this.input.focus();
+      }
+    }
+
+    greet() {
+      this.bot('Hello! Welcome to <strong>Urowell Integrative Care</strong> 🌿<br>I can help you book appointments, learn about our services, Cherry financing, peptide products, or anything else. How can I help you today?');
+      setTimeout(() => {
+        this.quickActions([
+          { t: '📅 Book Appointment', a: 'book' },
+          { t: '💳 Cherry Financing', a: 'cherry' },
+          { t: '🧬 Peptide Products', a: 'peptides' },
+          { t: '📍 Location & Hours', a: 'location' }
+        ]);
+      }, 600);
+    }
+
+    bot(html, typing = false) {
+      const d = document.createElement('div');
+      d.className = 'uw-message bot';
+      if (typing) {
+        d.innerHTML = '<div class="uw-typing"><span></span><span></span><span></span></div>';
+      } else {
+        d.innerHTML = `<div class="uw-msg-content">${html}</div>`;
+        this.history.push({ role: 'bot', msg: html, ts: new Date() });
+      }
+      this.msgs.appendChild(d);
+      this.msgs.scrollTop = this.msgs.scrollHeight;
+      return d;
+    }
+
+    user(text) {
+      const d = document.createElement('div');
+      d.className = 'uw-message user';
+      d.innerHTML = `<div class="uw-msg-content">${text}</div>`;
+      this.msgs.appendChild(d);
+      this.msgs.scrollTop = this.msgs.scrollHeight;
+      this.history.push({ role: 'user', msg: text, ts: new Date() });
+    }
+
+    quickActions(actions) {
+      const c = document.createElement('div');
+      c.className = 'uw-quick-actions';
+      actions.forEach(a => {
+        const b = document.createElement('button');
+        b.className = 'uw-quick-btn';
+        b.textContent = a.t;
+        b.onclick = () => this.handleAction(a.a, a.t);
+        c.appendChild(b);
+      });
+      this.msgs.appendChild(c);
+      this.msgs.scrollTop = this.msgs.scrollHeight;
+    }
+
+    handleAction(action, label) {
+      const qa = this.msgs.querySelector('.uw-quick-actions');
+      if (qa) qa.remove();
+      this.user(label);
+      const typing = this.bot('', true);
+      setTimeout(() => {
+        typing.remove();
+        switch (action) {
+          case 'book': this.startBooking(); break;
+          case 'reschedule': this.startReschedule(); break;
+          case 'cherry':
+            this.bot(KB.cherry.r);
+            setTimeout(() => this.quickActions([
+              { t: '📅 Book Appointment', a: 'book' },
+              { t: '❓ More Questions', a: 'more' }
+            ]), 800);
+            break;
+          case 'peptides':
+            this.bot(KB.peptides.r);
+            setTimeout(() => this.quickActions([
+              { t: '📅 Book Consultation', a: 'book' },
+              { t: '📍 Location', a: 'location' }
+            ]), 800);
+            break;
+          case 'location':
+            this.bot(`<div class="uw-info">${KB.location.r}<br><br><strong>🕐 Hours:</strong> Mon–Fri, 9:00 AM – 5:00 PM<br><strong>📞 Phone:</strong> <a href="tel:7147165959" style="color:#2D7D7D;">(714) 716-5959</a></div>`);
+            setTimeout(() => this.quickActions([
+              { t: '📅 Book Appointment', a: 'book' },
+              { t: '❓ Ask a Question', a: 'more' }
+            ]), 800);
+            break;
+          case 'more':
+            this.bot('What else can I help you with? Feel free to type your question or choose an option:');
+            this.quickActions([
+              { t: '📅 Book Appointment', a: 'book' },
+              { t: '🔄 Reschedule', a: 'reschedule' },
+              { t: '💳 Financing', a: 'cherry' },
+              { t: '📍 Location', a: 'location' }
+            ]);
+            break;
+          case 'end':
+            this.bot('Thank you for chatting with us! 🌿 If you need anything else, feel free to reopen the chat or call us at <a href="tel:7147165959" style="color:#2D7D7D;">(714) 716-5959</a>. Have a wonderful day!');
+            setTimeout(() => this.toggleChat(), 3500);
+            break;
+          default:
+            this.bot('How else can I help you?');
+            this.quickActions([
+              { t: '📅 Book Appointment', a: 'book' },
+              { t: '📍 Location & Hours', a: 'location' }
+            ]);
+        }
+      }, 900);
+    }
+
+    startBooking() {
+      this.bot('I\'ll help you request an appointment. Fill out the form below and our office will contact you within 24 hours to confirm.');
+      setTimeout(() => {
+        const wrap = document.createElement('div');
+        wrap.className = 'uw-message bot';
+        wrap.innerHTML = `
+          <div class="uw-msg-content" style="width:100%;max-width:100%;">
+            <form id="uw-appt-form">
+              <div class="uw-form-group"><label>Full Name *</label><input type="text" name="name" required placeholder="Jane Doe" /></div>
+              <div class="uw-form-group"><label>Email *</label><input type="email" name="email" required placeholder="jane@example.com" /></div>
+              <div class="uw-form-group"><label>Phone *</label><input type="tel" name="phone" required placeholder="(714) 555-0123" /></div>
+              <div class="uw-form-group"><label>Preferred Date *</label><input type="date" name="date" required min="${new Date().toISOString().split('T')[0]}" /></div>
+              <div class="uw-form-group"><label>Preferred Time *</label>
+                <select name="time" required>
+                  <option value="">Select a time</option>
+                  <option>9:00 AM</option><option>9:30 AM</option><option>10:00 AM</option>
+                  <option>10:30 AM</option><option>11:00 AM</option><option>11:30 AM</option>
+                  <option>2:00 PM</option><option>2:30 PM</option><option>3:00 PM</option>
+                  <option>3:30 PM</option><option>4:00 PM</option><option>4:30 PM</option>
+                </select>
+              </div>
+              <div class="uw-form-group"><label>Service of Interest</label>
+                <select name="service">
+                  <option value="">Select a service</option>
+                  <option>Alma Duo — ED & Pelvic Health</option>
+                  <option>FemiLift — Women's Wellness</option>
+                  <option>Alma TED — Hair Restoration</option>
+                  <option>PRP Therapy</option>
+                  <option>Peptide Consultation (Peplogix)</option>
+                  <option>Men's Health / TRT</option>
+                  <option>Skin Health / CO₂ Laser</option>
+                  <option>Regenerative Medicine</option>
+                  <option>General Urology</option>
+                  <option>Membership / Wellness Plan</option>
+                </select>
+              </div>
+              <div class="uw-form-group"><label>New or Returning Patient? *</label>
+                <select name="patient_type" required>
+                  <option value="">Select</option>
+                  <option value="new">New Patient</option>
+                  <option value="returning">Returning Patient</option>
+                </select>
+              </div>
+              <div class="uw-form-group"><label>Notes / Reason for Visit</label><textarea name="notes" placeholder="Brief description..."></textarea></div>
+              <button type="submit" class="uw-submit-btn">Submit Appointment Request</button>
+            </form>
+          </div>`;
+        this.msgs.appendChild(wrap);
+        this.msgs.scrollTop = this.msgs.scrollHeight;
+        setTimeout(() => {
+          document.getElementById('uw-appt-form').addEventListener('submit', e => this.submitAppt(e));
+        }, 100);
+      }, 500);
+    }
+
+    submitAppt(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.uw-submit-btn');
+      btn.disabled = true; btn.textContent = 'Submitting...';
+      const data = Object.fromEntries(new FormData(e.target));
+      const record = { ...data, type: 'appointment', ts: new Date().toISOString(), id: Date.now().toString() };
+      this.requests.push(record);
+      localStorage.setItem('uw_requests', JSON.stringify(this.requests));
+      console.log('%c📋 Urowell Appointment Request', 'color:#2D7D7D;font-weight:bold;font-size:14px;', record);
+      e.target.closest('.uw-message').remove();
+      this.bot(`<div class="uw-success"><strong>✅ Appointment Request Received!</strong><br><br>Thank you, ${data.name}! Your request for <strong>${data.date} at ${data.time}</strong> has been saved.<br><br>Our office will contact you at <strong>${data.phone}</strong> within 24 hours to confirm.<br><br>📞 Need immediate help? Call: <a href="tel:7147165959" style="color:#1a5c3a;font-weight:600;">(714) 716-5959</a></div>`);
+      setTimeout(() => {
+        this.bot('Is there anything else I can help you with?');
+        this.quickActions([
+          { t: '💳 Cherry Financing', a: 'cherry' },
+          { t: '📍 Get Directions', a: 'location' },
+          { t: '✅ All set!', a: 'end' }
+        ]);
+      }, 2000);
+    }
+
+    startReschedule() {
+      this.bot('I can help you reschedule. Please provide your details and our office will confirm your new time within 24 hours.');
+      setTimeout(() => {
+        const wrap = document.createElement('div');
+        wrap.className = 'uw-message bot';
+        wrap.innerHTML = `
+          <div class="uw-msg-content" style="width:100%;max-width:100%;">
+            <form id="uw-reschedule-form">
+              <div class="uw-form-group"><label>Full Name *</label><input type="text" name="name" required /></div>
+              <div class="uw-form-group"><label>Phone *</label><input type="tel" name="phone" required /></div>
+              <div class="uw-form-group"><label>Current Appointment Date</label><input type="date" name="current_date" /></div>
+              <div class="uw-form-group"><label>New Preferred Date *</label><input type="date" name="new_date" required min="${new Date().toISOString().split('T')[0]}" /></div>
+              <div class="uw-form-group"><label>New Preferred Time *</label>
+                <select name="new_time" required>
+                  <option value="">Select a time</option>
+                  <option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option>
+                  <option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option>
+                </select>
+              </div>
+              <button type="submit" class="uw-submit-btn">Submit Reschedule Request</button>
+            </form>
+          </div>`;
+        this.msgs.appendChild(wrap);
+        this.msgs.scrollTop = this.msgs.scrollHeight;
+        setTimeout(() => {
+          document.getElementById('uw-reschedule-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const data = Object.fromEntries(new FormData(e.target));
+            this.requests.push({ ...data, type: 'reschedule', ts: new Date().toISOString(), id: Date.now().toString() });
+            localStorage.setItem('uw_requests', JSON.stringify(this.requests));
+            e.target.closest('.uw-message').remove();
+            this.bot(`<div class="uw-success">Your reschedule request has been received! We'll call you at <strong>${data.phone}</strong> within 24 hours to confirm your new appointment.</div>`);
+            setTimeout(() => this.quickActions([{ t: '✅ Done', a: 'end' }]), 1500);
+          });
+        }, 100);
+      }, 500);
+    }
+
+    send() {
+      const msg = this.input.value.trim();
+      if (!msg) return;
+      this.user(msg);
+      this.input.value = '';
+      this.process(msg);
+    }
+
+    process(msg) {
+      const lc = msg.toLowerCase();
+      const typing = this.bot('', true);
+      setTimeout(() => {
+        typing.remove();
+        if (this.has(lc, ['appointment','schedule','book','visit','see doctor','consult'])) {
+          this.bot('I can help you book an appointment. Would you like to submit a request now?');
+          this.quickActions([
+            { t: '✅ Yes, book now', a: 'book' },
+            { t: '❌ Just asking', a: 'more' }
+          ]);
+          return;
+        }
+        if (this.has(lc, ['reschedule','change appointment','move appointment'])) {
+          this.startReschedule(); return;
+        }
+        if (this.has(lc, ['thank','thanks','bye','goodbye','done','finished','all set'])) {
+          this.handleAction('end', 'Goodbye'); return;
+        }
+        for (const [, info] of Object.entries(KB)) {
+          if (this.has(lc, info.kw)) {
+            this.bot(info.r);
+            setTimeout(() => {
+              this.bot('Is there anything else I can help you with?');
+              this.quickActions([
+                { t: '📅 Book Appointment', a: 'book' },
+                { t: '❓ More Questions', a: 'more' },
+                { t: '✅ All set', a: 'end' }
+              ]);
+            }, 1200);
+            return;
+          }
+        }
+        this.bot('I\'m here to help with appointments, services, Cherry financing, peptide products, and more. What can I assist you with?');
+        this.quickActions([
+          { t: '📅 Book Appointment', a: 'book' },
+          { t: '💳 Cherry Financing', a: 'cherry' },
+          { t: '📍 Location & Hours', a: 'location' },
+          { t: '🧬 Peptide Products', a: 'peptides' }
+        ]);
+      }, 900);
+    }
+
+    has(msg, kws) { return kws.some(k => msg.includes(k)); }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => { window.urowellBot = new UrowellBot(); });
+  } else {
+    window.urowellBot = new UrowellBot();
+  }
+
+  console.log('%c🌿 Urowell Integrative Care Chatbot Loaded', 'color:#2D7D7D;font-size:15px;font-weight:bold;');
+  console.log('%cView stored requests: JSON.parse(localStorage.getItem("uw_requests"))', 'color:#666;font-size:11px;');
+})();
 </script>
 </body>
 </html>
