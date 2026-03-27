@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Urowell Integrative Care — Your Wellness Journey Starts Here</title>
-  <meta name="description" content="Urowell Integrative Care by Uro Center OC. Premium integrative urology and wellness services. Book appointments, shop services, manage your membership, and earn rewards. Cherry financing available." />
-  <meta name="keywords" content="integrative care, urology, wellness, peptide therapy, GLP-1, semaglutide, hair restoration, sexual wellness, men's health, women's health, regenerative medicine, stem cell therapy, NAD+, Cherry financing, Square payment" />
+  <title>Urowell Integrative Care | Premium Wellness & Urology — Huntington Beach, CA</title>
+  <meta name="description" content="Urowell Integrative Care by Uro Center OC. Premium integrative urology, sexual wellness, peptide therapy, regenerative medicine, hair restoration, and aesthetic services in Huntington Beach, CA. Cherry financing available." />
+  <meta name="keywords" content="integrative care, urology, wellness, peptide therapy, GLP-1, semaglutide, hair restoration, sexual wellness, men's health, women's health, regenerative medicine, stem cell therapy, NAD+, Cherry financing, Huntington Beach, Orange County" />
   <meta property="og:title" content="Urowell Integrative Care" />
   <meta property="og:description" content="Book premium wellness services, earn rewards, and manage your membership — all in one place." />
   <meta property="og:image" content="https://urowellintegrativecare.com/assets/logo.png" />
@@ -13,789 +13,875 @@
   <link rel="icon" href="./assets/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --teal: #2D7D7D;
       --teal-dark: #1a5c5c;
-      --teal-mid: #3d9999;
+      --teal-mid: #3a9090;
       --teal-light: #e0f2f2;
-      --cream: #f5f0e8;
-      --sand: #c8b89a;
-      --sand-dark: #a89070;
+      --navy: #0f1f2e;
+      --navy-mid: #162636;
+      --cream: #f8f4ee;
+      --sand: #c8a96e;
+      --sand-light: #f5ede0;
       --white: #ffffff;
-      --dark: #1a3a3a;
+      --dark: #1a2a2a;
       --gray: #6b7280;
+      --gray-light: #f3f4f6;
       --green: #16a34a;
       --green-light: #f0fdf4;
       --green-border: #bbf7d0;
+      --gold: #d4a843;
     }
-
     html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      line-height: 1.6;
+    /* ── ANNOUNCEMENT BAR ── */
+    .announce-bar {
+      background: var(--teal); color: white;
+      text-align: center; padding: 10px 24px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
     }
+    .announce-bar a { color: var(--sand); text-decoration: none; font-weight: 700; }
 
     /* ── NAVBAR ── */
     nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(45, 125, 125, 0.97);
-      backdrop-filter: blur(12px);
-      padding: 0 24px;
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(15, 31, 46, 0.97);
+      backdrop-filter: blur(16px);
+      padding: 0 32px;
       display: flex; align-items: center; justify-content: space-between;
-      height: 72px;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+      height: 76px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.3);
     }
-    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .nav-logo img { width: 44px; height: 44px; object-fit: contain; border-radius: 10px; background: white; padding: 4px; }
-    .nav-brand { display: flex; flex-direction: column; }
-    .nav-brand-name { font-size: 18px; font-weight: 800; color: white; letter-spacing: 2px; line-height: 1; }
-    .nav-brand-sub { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.8); letter-spacing: 3px; }
-    .nav-links { display: flex; gap: 8px; align-items: center; }
-    .nav-links a {
-      color: rgba(255,255,255,0.9); text-decoration: none;
-      font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 8px;
-      transition: background 0.2s;
-    }
-    .nav-links a:hover { background: rgba(255,255,255,0.15); }
-    .nav-cta {
-      background: white !important; color: var(--teal) !important;
-      font-weight: 700 !important; border-radius: 10px !important;
-    }
-    .nav-cta:hover { background: var(--cream) !important; }
+    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .nav-logo img { width: 46px; height: 46px; object-fit: contain; border-radius: 12px; background: white; padding: 5px; }
+    .nav-brand-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 800; color: white; letter-spacing: 3px; line-height: 1; }
+    .nav-brand-sub { font-size: 9px; font-weight: 700; color: var(--sand); letter-spacing: 4px; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 8px; transition: all 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: white; background: rgba(255,255,255,0.1); }
+    .nav-cta { background: var(--sand) !important; color: var(--navy) !important; font-weight: 700 !important; border-radius: 10px !important; }
+    .nav-cta:hover { background: #e0b96a !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
-    .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+    .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 76px; left: 0; right: 0; background: var(--navy); padding: 16px; z-index: 199; border-top: 1px solid rgba(255,255,255,0.1); }
+    .mobile-menu.open { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-menu a { color: rgba(255,255,255,0.9); text-decoration: none; font-size: 15px; font-weight: 500; padding: 12px 16px; border-radius: 10px; }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.1); }
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 60%, #0f3333 100%);
-      padding: 80px 24px 100px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2233 50%, #0a1a20 100%);
+      min-height: 92vh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding: 80px 32px;
     }
-    .hero::before {
-      content: '';
-      position: absolute; top: -60px; right: -60px;
-      width: 300px; height: 300px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 50%;
-    }
-    .hero::after {
-      content: '';
-      position: absolute; bottom: -80px; left: -40px;
-      width: 200px; height: 200px;
-      background: rgba(255,255,255,0.04);
-      border-radius: 50%;
-    }
-    .hero-logo { width: 100px; height: 100px; object-fit: contain; background: white; border-radius: 24px; padding: 8px; margin: 0 auto 24px; display: block; box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
-    .hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 16px; }
-    .hero p { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 40px; }
-    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: white; color: var(--teal);
-      padding: 16px 28px; border-radius: 14px;
-      font-size: 16px; font-weight: 700; text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.15); color: white;
-      border: 2px solid rgba(255,255,255,0.4);
-      padding: 16px 28px; border-radius: 14px;
-      font-size: 16px; font-weight: 700; text-decoration: none;
-      transition: background 0.2s;
-    }
-    .btn-secondary:hover { background: rgba(255,255,255,0.25); }
-    .btn-green {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--green); color: white;
-      padding: 16px 28px; border-radius: 14px;
-      font-size: 16px; font-weight: 700; text-decoration: none;
-      box-shadow: 0 4px 20px rgba(22,163,74,0.35);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-green:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(22,163,74,0.45); }
+    .hero-orb1 { position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(45,125,125,0.15) 0%, transparent 70%); border-radius: 50%; }
+    .hero-orb2 { position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(200,169,110,0.1) 0%, transparent 70%); border-radius: 50%; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-label { font-size: 12px; font-weight: 700; color: var(--sand); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 16px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 5vw, 68px); font-weight: 900; color: white; line-height: 1.05; margin-bottom: 20px; }
+    .hero h1 span { color: var(--sand); }
+    .hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 480px; margin-bottom: 36px; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-sand { display: inline-flex; align-items: center; gap: 8px; background: var(--sand); color: var(--navy); padding: 16px 28px; border-radius: 12px; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.2s; }
+    .btn-sand:hover { background: #e0b96a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,169,110,0.4); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); padding: 16px 28px; border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+    .btn-green { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: white; padding: 16px 28px; border-radius: 12px; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.2s; }
+    .btn-green:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(22,163,74,0.4); }
+    .btn-teal { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: white; padding: 14px 24px; border-radius: 12px; font-size: 15px; font-weight: 700; text-decoration: none; transition: all 0.2s; }
+    .btn-teal:hover { background: var(--teal-dark); transform: translateY(-2px); }
+    .hero-stats { display: flex; gap: 32px; margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .hero-stat-val { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; color: var(--sand); }
+    .hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+    .hero-right { display: flex; flex-direction: column; gap: 16px; }
+    .hero-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 20px 24px; backdrop-filter: blur(8px); }
+    .hero-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .hero-card-title { font-size: 16px; font-weight: 700; color: white; margin-bottom: 4px; }
+    .hero-card-desc { font-size: 13px; color: rgba(255,255,255,0.65); }
+    .hero-card-tag { display: inline-block; margin-top: 8px; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; background: rgba(45,125,125,0.3); color: var(--teal-light); }
+
+    /* ── TRUST BAR ── */
+    .trust-bar { background: white; padding: 24px 32px; border-bottom: 1px solid #e5e7eb; }
+    .trust-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--dark); }
+    .trust-icon { font-size: 22px; }
 
     /* ── SECTIONS ── */
-    section { padding: 72px 24px; }
+    section { padding: 88px 32px; }
     .container { max-width: 1100px; margin: 0 auto; }
-    .section-label { font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
-    .section-title { font-size: clamp(26px, 4vw, 40px); font-weight: 800; color: var(--dark); margin-bottom: 16px; line-height: 1.2; }
-    .section-sub { font-size: 17px; color: var(--gray); max-width: 600px; margin-bottom: 48px; }
+    .section-eyebrow { font-size: 12px; font-weight: 700; color: var(--teal); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 44px); font-weight: 800; color: var(--dark); margin-bottom: 16px; line-height: 1.15; }
+    .section-sub { font-size: 17px; color: var(--gray); max-width: 580px; line-height: 1.7; }
+    .section-divider { width: 60px; height: 4px; background: var(--sand); border-radius: 2px; margin: 16px 0 32px; }
 
-    /* ── PAYMENT BANNER ── */
-    .payment-banner {
-      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-      border: 2px solid var(--green-border);
-      border-radius: 24px;
-      padding: 32px;
-      margin-bottom: 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .payment-banner-icon {
-      width: 64px; height: 64px; border-radius: 50%;
-      background: var(--green); display: flex; align-items: center; justify-content: center;
-      font-size: 28px; font-weight: 900; color: white; flex-shrink: 0;
-    }
-    .payment-banner h3 { font-size: 22px; font-weight: 800; color: #15803d; margin-bottom: 6px; }
-    .payment-banner p { font-size: 15px; color: #16a34a; }
-    .payment-banner a {
-      margin-left: auto; background: var(--green); color: white;
-      padding: 12px 24px; border-radius: 12px; text-decoration: none;
-      font-weight: 700; font-size: 15px; white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .payment-banner a:hover { background: #15803d; }
-
-    .payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .payment-card {
-      background: white; border-radius: 20px; padding: 28px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-      border: 2px solid transparent;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .payment-card:hover { border-color: var(--teal); transform: translateY(-2px); }
-    .payment-card-icon { font-size: 36px; margin-bottom: 12px; }
-    .payment-card h3 { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
-    .payment-card p { font-size: 14px; color: var(--gray); margin-bottom: 16px; }
-    .payment-tag {
-      display: inline-block; padding: 4px 12px; border-radius: 20px;
-      font-size: 12px; font-weight: 700;
-    }
-    .tag-teal { background: var(--teal-light); color: var(--teal); }
-    .tag-green { background: var(--green-light); color: var(--green); }
+    /* ── DOCTOR SECTION ── */
+    .doctor-section { background: white; }
+    .doctor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .doctor-img-wrap { position: relative; }
+    .doctor-img-wrap img { width: 100%; border-radius: 24px; object-fit: cover; aspect-ratio: 4/5; background: var(--sand-light); display: flex; align-items: center; justify-content: center; }
+    .doctor-img-placeholder { width: 100%; aspect-ratio: 4/5; border-radius: 24px; background: linear-gradient(135deg, var(--sand-light), #e8d5b7); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+    .doctor-img-placeholder .doc-icon { font-size: 80px; }
+    .doctor-img-placeholder p { font-size: 16px; color: var(--gray); font-weight: 600; }
+    .doctor-badge { position: absolute; bottom: -20px; right: -20px; background: var(--teal); color: white; border-radius: 16px; padding: 16px 20px; box-shadow: 0 8px 24px rgba(45,125,125,0.3); }
+    .doctor-badge-val { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 800; }
+    .doctor-badge-label { font-size: 11px; opacity: 0.85; }
+    .doctor-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 20px 0; }
+    .doctor-tag { padding: 8px 16px; border-radius: 20px; border: 2px solid var(--teal-light); color: var(--teal); font-size: 13px; font-weight: 600; }
+    .doctor-bio { font-size: 16px; color: var(--gray); line-height: 1.8; margin-bottom: 24px; }
 
     /* ── SERVICES ── */
-    .services-bg { background: white; }
-    .services-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
-    .tab-btn {
-      padding: 10px 18px; border-radius: 20px; border: 2px solid #e5e7eb;
-      background: white; color: var(--gray); font-size: 14px; font-weight: 600;
-      cursor: pointer; transition: all 0.2s;
-    }
-    .tab-btn.active, .tab-btn:hover { background: var(--teal); color: white; border-color: var(--teal); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-    .service-card {
-      background: var(--cream); border-radius: 20px; padding: 24px;
-      border: 2px solid transparent; transition: all 0.2s; cursor: pointer;
-    }
-    .service-card:hover { border-color: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,125,125,0.12); }
-    .service-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
-    .service-name { font-size: 16px; font-weight: 700; color: var(--dark); flex: 1; margin-right: 12px; }
-    .service-price { font-size: 20px; font-weight: 900; color: var(--teal); }
-    .service-orig { font-size: 12px; color: var(--gray); text-decoration: line-through; text-align: right; }
-    .service-save { font-size: 12px; color: var(--green); text-align: right; }
-    .service-cherry { background: var(--green-light); border-radius: 8px; padding: 8px 12px; font-size: 13px; color: var(--green); font-weight: 600; margin-top: 12px; }
-    .badge { display: inline-block; padding: 3px 8px; border-radius: 8px; font-size: 11px; font-weight: 700; margin-right: 4px; margin-bottom: 4px; }
+    .services-section { background: var(--cream); }
+    .services-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+    .tab-btn { padding: 10px 20px; border-radius: 24px; border: 2px solid #d1d5db; background: white; color: var(--gray); font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .tab-btn.active, .tab-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+    .services-panel { display: none; }
+    .services-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .svc-card { background: white; border-radius: 20px; padding: 24px; border: 2px solid transparent; transition: all 0.25s; cursor: pointer; }
+    .svc-card:hover { border-color: var(--teal); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(45,125,125,0.12); }
+    .svc-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; gap: 12px; }
+    .svc-name { font-size: 16px; font-weight: 700; color: var(--dark); flex: 1; line-height: 1.3; }
+    .svc-pricing { text-align: right; flex-shrink: 0; }
+    .svc-price { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: var(--teal); }
+    .svc-orig { font-size: 12px; color: var(--gray); text-decoration: line-through; }
+    .svc-save { font-size: 12px; color: var(--green); font-weight: 600; }
+    .svc-sessions { font-size: 13px; color: var(--gray); margin-bottom: 10px; }
+    .svc-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; }
     .badge-peplogix { background: #e0f2fe; color: #0369a1; }
     .badge-ships { background: var(--green-light); color: var(--green); }
     .badge-new { background: #fef3c7; color: #d97706; }
+    .svc-cherry { background: var(--green-light); border-radius: 10px; padding: 10px 14px; font-size: 13px; color: var(--green); font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .svc-book-btn { display: block; width: 100%; margin-top: 14px; padding: 10px; background: var(--teal); color: white; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; transition: background 0.2s; }
+    .svc-book-btn:hover { background: var(--teal-dark); }
+
+    /* ── CASH SERVICES GRID ── */
+    .cash-section { background: var(--navy); }
+    .cash-section .section-eyebrow { color: var(--sand); }
+    .cash-section .section-title { color: white; }
+    .cash-section .section-sub { color: rgba(255,255,255,0.7); }
+    .cash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 40px; }
+    .cash-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 22px; text-decoration: none; transition: all 0.2s; display: block; }
+    .cash-card:hover { background: rgba(255,255,255,0.12); border-color: var(--sand); transform: translateY(-2px); }
+    .cash-card-icon { font-size: 28px; margin-bottom: 10px; }
+    .cash-card-name { font-size: 15px; font-weight: 700; color: white; margin-bottom: 6px; }
+    .cash-card-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .cash-card-arrow { font-size: 18px; color: var(--sand); margin-top: 12px; display: block; }
 
     /* ── MEMBERSHIPS ── */
-    .memberships-bg { background: var(--cream); }
-    .memberships-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
-    .membership-card {
-      border-radius: 24px; padding: 28px; color: white;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
-    }
-    .membership-card:hover { transform: translateY(-4px); }
-    .membership-silver { background: linear-gradient(135deg, #d1d5db, #9ca3af); }
-    .membership-gold { background: linear-gradient(135deg, #fbbf24, #d97706); }
-    .membership-platinum { background: linear-gradient(135deg, #4b5563, #111827); }
-    .membership-card .tier-name { font-size: 28px; font-weight: 900; margin-bottom: 4px; }
-    .membership-silver .tier-name { color: #1f2937; }
-    .membership-gold .tier-name { color: #1c1917; }
-    .membership-platinum .tier-name { color: #f9fafb; }
-    .tier-price { font-size: 16px; font-weight: 600; margin-bottom: 20px; opacity: 0.8; }
-    .tier-discount { font-size: 40px; font-weight: 900; margin-bottom: 4px; }
-    .tier-off { font-size: 14px; font-weight: 600; opacity: 0.8; margin-bottom: 20px; }
-    .tier-benefits { list-style: none; }
-    .tier-benefits li { font-size: 14px; padding: 6px 0; border-top: 1px solid rgba(255,255,255,0.2); }
-    .tier-benefits li::before { content: '✓ '; font-weight: 700; }
-    .membership-silver .tier-benefits li { color: #1f2937; border-top-color: rgba(0,0,0,0.1); }
-    .membership-gold .tier-benefits li { color: #1c1917; border-top-color: rgba(0,0,0,0.1); }
-
-    /* ── APP DOWNLOAD ── */
-    .app-section {
-      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
-      text-align: center;
-    }
-    .app-section h2 { color: white; }
-    .app-section .section-sub { color: rgba(255,255,255,0.85); margin-left: auto; margin-right: auto; }
-    .app-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
-    .app-store-btn {
-      display: inline-flex; align-items: center; gap: 12px;
-      background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.4);
-      color: white; padding: 14px 24px; border-radius: 14px; text-decoration: none;
-      transition: background 0.2s;
-    }
-    .app-store-btn:hover { background: rgba(255,255,255,0.25); }
-    .app-store-btn .store-icon { font-size: 28px; }
-    .app-store-btn .store-text { text-align: left; }
-    .app-store-btn .store-label { font-size: 11px; opacity: 0.8; display: block; }
-    .app-store-btn .store-name { font-size: 18px; font-weight: 700; display: block; }
+    .memberships-section { background: white; }
+    .memberships-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .mem-card { border-radius: 24px; padding: 32px; color: white; box-shadow: 0 8px 40px rgba(0,0,0,0.15); transition: transform 0.25s; position: relative; overflow: hidden; }
+    .mem-card:hover { transform: translateY(-6px); }
+    .mem-card::before { content: ''; position: absolute; top: -40px; right: -40px; width: 150px; height: 150px; background: rgba(255,255,255,0.08); border-radius: 50%; }
+    .mem-silver { background: linear-gradient(135deg, #c8c8c8, #9ca3af); }
+    .mem-gold { background: linear-gradient(135deg, #f5c842, #d97706); }
+    .mem-platinum { background: linear-gradient(135deg, #374151, #111827); }
+    .mem-tier { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; margin-bottom: 4px; }
+    .mem-silver .mem-tier { color: #1f2937; }
+    .mem-gold .mem-tier { color: #1c1917; }
+    .mem-platinum .mem-tier { color: #f9fafb; }
+    .mem-price { font-size: 15px; font-weight: 600; opacity: 0.8; margin-bottom: 20px; }
+    .mem-discount { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; line-height: 1; }
+    .mem-off { font-size: 14px; font-weight: 600; opacity: 0.75; margin-bottom: 24px; }
+    .mem-benefits { list-style: none; }
+    .mem-benefits li { font-size: 14px; padding: 8px 0; border-top: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 8px; }
+    .mem-silver .mem-benefits li { color: #1f2937; border-top-color: rgba(0,0,0,0.1); }
+    .mem-gold .mem-benefits li { color: #1c1917; border-top-color: rgba(0,0,0,0.1); }
+    .mem-benefits li::before { content: '✓'; font-weight: 800; font-size: 13px; }
+    .mem-cta { display: block; width: 100%; margin-top: 24px; padding: 12px; background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.4); border-radius: 12px; font-size: 14px; font-weight: 700; text-align: center; text-decoration: none; transition: background 0.2s; }
+    .mem-silver .mem-cta { color: #1f2937; }
+    .mem-gold .mem-cta { color: #1c1917; }
+    .mem-cta:hover { background: rgba(255,255,255,0.35); }
 
     /* ── CHERRY SECTION ── */
     .cherry-section { background: var(--green-light); }
-    .cherry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
-    .cherry-steps { list-style: none; margin-top: 24px; }
-    .cherry-step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
-    .cherry-step-num {
-      width: 36px; height: 36px; border-radius: 50%; background: var(--green);
-      color: white; font-weight: 800; font-size: 16px;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
+    .cherry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .cherry-steps { list-style: none; margin-top: 28px; }
+    .cherry-step { display: flex; gap: 18px; margin-bottom: 24px; }
+    .cherry-step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: white; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .cherry-step-title { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-    .cherry-step-desc { font-size: 14px; color: var(--gray); }
-    .cherry-card {
-      background: white; border-radius: 24px; padding: 32px;
-      box-shadow: 0 8px 32px rgba(22,163,74,0.15);
-      border: 2px solid var(--green-border);
-    }
-    .cherry-card h3 { font-size: 24px; font-weight: 800; color: #15803d; margin-bottom: 8px; }
-    .cherry-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
-    .cherry-stat { text-align: center; background: var(--green-light); border-radius: 12px; padding: 16px; }
-    .cherry-stat-val { font-size: 28px; font-weight: 900; color: var(--green); }
+    .cherry-step-desc { font-size: 14px; color: var(--gray); line-height: 1.6; }
+    .cherry-card { background: white; border-radius: 28px; padding: 36px; box-shadow: 0 12px 48px rgba(22,163,74,0.15); border: 2px solid var(--green-border); }
+    .cherry-card h3 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 800; color: #15803d; margin-bottom: 8px; }
+    .cherry-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .cherry-stat { background: var(--green-light); border-radius: 14px; padding: 18px; text-align: center; border: 1px solid var(--green-border); }
+    .cherry-stat-val { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; color: var(--green); }
     .cherry-stat-label { font-size: 12px; color: var(--gray); margin-top: 4px; }
+    .cherry-merchant-box { background: var(--green-light); border-radius: 14px; padding: 18px; border: 1px solid var(--green-border); }
+    .cherry-merchant-id { font-size: 15px; font-weight: 800; color: #15803d; margin-bottom: 4px; }
+    .cherry-merchant-desc { font-size: 13px; color: #16a34a; line-height: 1.5; }
 
     /* ── PEPLOGIX ── */
-    .peplogix-section { background: white; }
-    .peplogix-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-    .peplogix-card {
-      background: var(--cream); border-radius: 20px; padding: 24px;
-      border: 2px solid transparent; transition: all 0.2s;
+    .peplogix-section { background: var(--cream); }
+    .peplogix-tabs { display: flex; gap: 8px; margin-bottom: 32px; }
+    .peplogix-tab { padding: 10px 20px; border-radius: 24px; border: 2px solid #d1d5db; background: white; color: var(--gray); font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+    .peplogix-tab.active, .peplogix-tab:hover { background: #0369a1; color: white; border-color: #0369a1; }
+    .peplogix-panel { display: none; }
+    .peplogix-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .pep-card { background: white; border-radius: 20px; padding: 24px; border: 2px solid transparent; transition: all 0.25s; }
+    .pep-card:hover { border-color: #0369a1; transform: translateY(-3px); box-shadow: 0 12px 32px rgba(3,105,161,0.1); }
+    .pep-tag { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; }
+    .pep-name { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; line-height: 1.3; }
+    .pep-desc { font-size: 13px; color: var(--gray); margin-bottom: 14px; line-height: 1.6; }
+    .pep-price-row { display: flex; align-items: baseline; gap: 8px; }
+    .pep-price { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: var(--teal); }
+    .pep-orig { font-size: 13px; color: var(--gray); text-decoration: line-through; }
+    .pep-cherry { font-size: 12px; color: var(--green); font-weight: 600; margin-top: 8px; }
+
+    /* ── APP SECTION ── */
+    .app-section {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--navy) 100%);
+      position: relative; overflow: hidden;
     }
-    .peplogix-card:hover { border-color: #0369a1; transform: translateY(-2px); }
-    .peplogix-tag { background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 10px; }
-    .peplogix-name { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-    .peplogix-desc { font-size: 13px; color: var(--gray); margin-bottom: 12px; }
-    .peplogix-price { font-size: 20px; font-weight: 900; color: var(--teal); }
+    .app-section::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(45,125,125,0.2) 0%, transparent 70%); border-radius: 50%; }
+    .app-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .app-eyebrow { font-size: 12px; font-weight: 700; color: var(--sand); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 12px; }
+    .app-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.5vw, 44px); font-weight: 800; color: white; margin-bottom: 16px; line-height: 1.15; }
+    .app-desc { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 32px; line-height: 1.7; }
+    .app-features { list-style: none; margin-bottom: 36px; }
+    .app-features li { font-size: 15px; color: rgba(255,255,255,0.85); padding: 8px 0; display: flex; align-items: center; gap: 10px; }
+    .app-features li::before { content: '✓'; color: var(--sand); font-weight: 800; font-size: 16px; }
+    .app-store-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .store-btn { display: inline-flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.25); color: white; padding: 14px 22px; border-radius: 14px; text-decoration: none; transition: all 0.2s; }
+    .store-btn:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); }
+    .store-btn .s-icon { font-size: 30px; }
+    .store-btn .s-label { font-size: 11px; opacity: 0.75; display: block; }
+    .store-btn .s-name { font-size: 18px; font-weight: 700; display: block; }
+    .app-mockup { display: flex; justify-content: center; align-items: center; }
+    .app-phone-frame { width: 280px; background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.15); border-radius: 40px; padding: 20px; }
+    .app-phone-screen { background: var(--navy); border-radius: 28px; padding: 20px; }
+    .app-screen-header { background: #3730a3; border-radius: 16px; padding: 16px; margin-bottom: 12px; }
+    .app-screen-logo { font-size: 13px; font-weight: 800; color: white; margin-bottom: 8px; }
+    .app-screen-greeting { font-size: 12px; color: rgba(255,255,255,0.8); }
+    .app-screen-greeting b { display: block; font-size: 13px; color: white; }
+    .app-screen-shop { background: var(--sand); border-radius: 14px; padding: 16px; margin-bottom: 10px; }
+    .app-screen-shop-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; color: white; }
+    .app-screen-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+    .app-screen-card { background: var(--teal-dark); border-radius: 12px; padding: 14px 12px; }
+    .app-screen-card-title { font-size: 12px; font-weight: 700; color: white; }
+    .app-screen-mem { background: var(--gold); border-radius: 12px; padding: 14px; }
+    .app-screen-mem-label { font-size: 11px; color: rgba(0,0,0,0.6); }
+    .app-screen-mem-tier { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 800; color: #1c1917; }
+
+    /* ── PATIENT RESOURCES ── */
+    .resources-section { background: white; }
+    .resources-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+    .resource-card { background: var(--cream); border-radius: 20px; padding: 28px; border: 2px solid transparent; transition: all 0.2s; }
+    .resource-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+    .resource-icon { font-size: 36px; margin-bottom: 14px; }
+    .resource-title { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .resource-desc { font-size: 14px; color: var(--gray); margin-bottom: 16px; line-height: 1.6; }
+    .resource-link { color: var(--teal); font-weight: 700; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+    .resource-link:hover { color: var(--teal-dark); }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--teal-dark);
-      color: rgba(255,255,255,0.8);
-      padding: 48px 24px 32px;
-    }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto 40px; }
-    .footer-brand img { width: 56px; height: 56px; object-fit: contain; background: white; border-radius: 12px; padding: 6px; margin-bottom: 12px; }
-    .footer-brand-name { font-size: 20px; font-weight: 800; color: white; letter-spacing: 2px; }
-    .footer-brand-sub { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 3px; margin-bottom: 12px; }
-    .footer-brand p { font-size: 14px; line-height: 1.7; }
-    .footer-col h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
-    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 8px; transition: color 0.2s; }
-    .footer-col a:hover { color: white; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 12px; }
+    footer { background: var(--navy); color: rgba(255,255,255,0.75); padding: 64px 32px 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1100px; margin: 0 auto 48px; }
+    .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .footer-logo img { width: 52px; height: 52px; object-fit: contain; background: white; border-radius: 12px; padding: 6px; }
+    .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 800; color: white; letter-spacing: 2px; }
+    .footer-brand-sub { font-size: 9px; color: var(--sand); letter-spacing: 4px; text-transform: uppercase; }
+    .footer-about { font-size: 14px; line-height: 1.8; margin-bottom: 20px; }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; margin-bottom: 10px; }
+    .footer-contact-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 2px; }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.65); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--sand); }
+    .footer-hours { font-size: 14px; line-height: 1.9; }
+    .footer-hours span { color: white; font-weight: 600; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     .footer-bottom p { font-size: 13px; }
+    .footer-bottom a { color: var(--sand); text-decoration: none; }
+    .footer-payment-icons { display: flex; gap: 8px; align-items: center; }
+    .payment-icon-badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 700; color: white; }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .doctor-grid { grid-template-columns: 1fr; }
+      .doctor-badge { display: none; }
+      .cherry-grid { grid-template-columns: 1fr; }
+      .app-inner { grid-template-columns: 1fr; }
+      .app-mockup { display: none; }
+      .memberships-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 0 16px; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .nav-links.open {
-        display: flex; flex-direction: column; position: absolute;
-        top: 72px; left: 0; right: 0; background: var(--teal-dark);
-        padding: 16px; gap: 4px; z-index: 99;
-      }
-      .payment-grid { grid-template-columns: 1fr; }
-      .cherry-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .payment-banner { flex-direction: column; }
-      .payment-banner a { margin-left: 0; width: 100%; text-align: center; }
-    }
-    @media (max-width: 480px) {
+      section { padding: 64px 16px; }
+      .hero { padding: 60px 16px; min-height: auto; }
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
       .footer-grid { grid-template-columns: 1fr; }
-      .cherry-stats { grid-template-columns: 1fr 1fr; }
+      .cash-grid { grid-template-columns: 1fr 1fr; }
+      .services-panel.active { grid-template-columns: 1fr; }
     }
 
-    /* ── ACTIVE SERVICES ── */
-    .services-panel { display: none; }
-    .services-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-
-    /* ── SCROLL ANIMATIONS ── */
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    /* ── ANIMATIONS ── */
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up-delay { transition-delay: 0.15s; }
+    .fade-up-delay2 { transition-delay: 0.3s; }
   </style>
 </head>
 <body>
 
+<!-- ── ANNOUNCEMENT BAR ── -->
+<div class="announce-bar">
+  🌿 Cherry Patient Financing Now Available — <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank">Apply in 60 seconds, ~90% approval rate →</a>
+</div>
+
 <!-- ── NAVBAR ── -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="./assets/logo.png" alt="Urowell Logo" />
-    <div class="nav-brand">
-      <span class="nav-brand-name">UROWELL</span>
-      <span class="nav-brand-sub">INTEGRATIVE CARE</span>
+    <img src="./assets/logo.png" alt="Urowell Integrative Care" />
+    <div>
+      <div class="nav-brand-name">UROWELL</div>
+      <div class="nav-brand-sub">Integrative Care</div>
     </div>
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#services">Services</a>
+    <a href="#cash-services">Cash Services</a>
+    <a href="#doctor">Our Team</a>
     <a href="#memberships">Memberships</a>
     <a href="#financing">Financing</a>
-    <a href="#peptides">Peptides</a>
-    <a href="#app">Get the App</a>
-    <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank" class="nav-cta">Apply for Financing</a>
+    <a href="#app">App</a>
+    <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="nav-cta">Book Appointment</a>
   </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#cash-services" onclick="toggleMenu()">Cash Services</a>
+  <a href="#doctor" onclick="toggleMenu()">Our Team</a>
+  <a href="#memberships" onclick="toggleMenu()">Memberships</a>
+  <a href="#financing" onclick="toggleMenu()">Financing</a>
+  <a href="#app" onclick="toggleMenu()">App</a>
+  <a href="https://urologycenteroc.com/book-appointment" target="_blank" style="background:var(--sand);color:var(--navy);font-weight:700;border-radius:10px;margin-top:8px;">Book Appointment</a>
+</div>
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <img src="./assets/logo.png" alt="Urowell Integrative Care Logo" class="hero-logo" />
-  <h1>Your Wellness<br>Journey Starts Here</h1>
-  <p>Book premium services, earn rewards, and manage your membership — all in one place. Flexible payment options available.</p>
-  <div class="hero-btns">
-    <a href="https://apps.apple.com/app/id6754045941" class="btn-primary" target="_blank">
-      🍎 Download on App Store
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=com.urowell.elite" class="btn-primary" target="_blank">
-      ▶ Get it on Google Play
-    </a>
-    <a href="https://pay.withcherry.com/?merchantId=AJK0BO" class="btn-green" target="_blank">
-      💳 Apply for Financing
-    </a>
+  <div class="hero-orb1"></div>
+  <div class="hero-orb2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-label">Uro Center OC — Huntington Beach, CA</div>
+      <h1>Premium Wellness.<br><span>Personalized</span><br>for You.</h1>
+      <p>Integrative urology, sexual wellness, peptide therapy, regenerative medicine, and aesthetic services — all under one roof. Flexible financing available.</p>
+      <div class="hero-btns">
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="btn-sand">Book Appointment</a>
+        <a href="#services" class="btn-outline">Explore Services</a>
+        <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank" class="btn-green">Apply for Financing</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-val">7+</div>
+          <div class="hero-stat-label">Service Categories</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">~90%</div>
+          <div class="hero-stat-label">Cherry Approval Rate</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">3</div>
+          <div class="hero-stat-label">Membership Tiers</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-icon">💳</div>
+        <div class="hero-card-title">Cherry Patient Financing</div>
+        <div class="hero-card-desc">Apply in 60 seconds. 0% APR options. Plans from 6 weeks to 60 months.</div>
+        <span class="hero-card-tag">~90% Approval Rate</span>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">🧬</div>
+        <div class="hero-card-title">Peplogix Peptide Therapy</div>
+        <div class="hero-card-desc">GLP-1, BPC-157, NAD+, PT-141 and more — shipped directly to your door.</div>
+        <span class="hero-card-tag">Ships to Your Door</span>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">📱</div>
+        <div class="hero-card-title">Urowell Elite App</div>
+        <div class="hero-card-desc">Book services, earn rewards, manage your membership. Available on iOS & Android.</div>
+        <span class="hero-card-tag">App Store + Google Play</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ── PAYMENT OPTIONS ── -->
-<section id="financing" style="background: white;">
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">🏥</span> Board Certified Urologist</div>
+    <div class="trust-item"><span class="trust-icon">📍</span> Huntington Beach, CA</div>
+    <div class="trust-item"><span class="trust-icon">💳</span> Cherry Financing Available</div>
+    <div class="trust-item"><span class="trust-icon">🧬</span> Peplogix Peptide Partner</div>
+    <div class="trust-item"><span class="trust-icon">📱</span> iOS &amp; Android App</div>
+    <div class="trust-item"><span class="trust-icon">⭐</span> Urowell Elite Membership</div>
+  </div>
+</div>
+
+<!-- ── DOCTOR SECTION ── -->
+<section id="doctor" class="doctor-section">
   <div class="container">
-    <div class="section-label">Payment Options</div>
-    <h2 class="section-title">Flexible Ways to Pay</h2>
-    <p class="section-sub">We offer two convenient payment methods — pay in full via Square, or spread the cost with Cherry patient financing.</p>
-
-    <div class="payment-banner fade-up">
-      <div class="payment-banner-icon">%</div>
-      <div>
-        <h3>Cherry Patient Financing — Now Available</h3>
-        <p>Apply in 60 seconds · ~90% approval rate · 0% APR options · Plans from 6 weeks to 60 months · No hard credit pull</p>
+    <div class="doctor-grid">
+      <div class="doctor-img-wrap fade-up">
+        <div class="doctor-img-placeholder">
+          <span class="doc-icon">👨‍⚕️</span>
+          <p>Dr. Khaled Fareed, MD</p>
+        </div>
+        <div class="doctor-badge">
+          <div class="doctor-badge-val">MD</div>
+          <div class="doctor-badge-label">Board Certified</div>
+        </div>
       </div>
-      <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank">Apply Now →</a>
-    </div>
-
-    <div class="payment-grid fade-up">
-      <div class="payment-card">
-        <div class="payment-card-icon">💳</div>
-        <h3>Pay in Full</h3>
-        <p>Secure, instant payment powered by Square. Accepts all major credit cards and Apple Pay. PCI DSS compliant — your data is always protected.</p>
-        <span class="payment-tag tag-teal">Square · Apple Pay</span>
-        <span class="payment-tag tag-teal">All Major Cards</span>
-      </div>
-      <div class="payment-card">
-        <div class="payment-card-icon">🌿</div>
-        <h3>Cherry Payment Plans</h3>
-        <p>Split your treatment cost into affordable monthly payments. Apply directly in the app or online. Instant approval decision with no impact on your credit score.</p>
-        <span class="payment-tag tag-green">0% APR Options</span>
-        <span class="payment-tag tag-green">6 Weeks – 60 Months</span>
+      <div class="fade-up fade-up-delay">
+        <div class="section-eyebrow">Medical Director</div>
+        <h2 class="section-title">Khaled Fareed, MD</h2>
+        <div class="section-divider"></div>
+        <p class="doctor-bio">Board Certified Urologist and founder of Uro Center OC, Dr. Fareed brings decades of specialized experience to Huntington Beach. Dedicated to both functional health and aesthetic confidence, he leads a team committed to your complete well-being through integrative, evidence-based care.</p>
+        <p class="doctor-bio">Dr. Fareed specializes in integrative urology, sexual optimization, regenerative medicine, and medical aesthetics — offering a unique blend of conventional and cutting-edge wellness treatments.</p>
+        <div class="doctor-tags">
+          <span class="doctor-tag">Board Certified</span>
+          <span class="doctor-tag">Urological Expert</span>
+          <span class="doctor-tag">Aesthetic Specialist</span>
+          <span class="doctor-tag">Regenerative Medicine</span>
+        </div>
+        <a href="https://urologycenteroc.com/our-team" target="_blank" class="btn-teal">Read Full Biography →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ── SERVICES ── -->
-<section id="services" class="services-bg">
+<section id="services" class="services-section">
   <div class="container">
-    <div class="section-label">What We Offer</div>
+    <div class="section-eyebrow">What We Offer</div>
     <h2 class="section-title">Premium Wellness Services</h2>
-    <p class="section-sub">Browse our full range of integrative urology and wellness treatments. Member pricing shown.</p>
+    <div class="section-divider"></div>
+    <p class="section-sub" style="margin-bottom: 40px;">Browse our full range of integrative urology and wellness treatments. Member pricing shown. Cherry financing available on all services.</p>
 
     <div class="services-tabs" id="serviceTabs">
-      <button class="tab-btn active" onclick="showCategory('hair')">Hair Loss</button>
-      <button class="tab-btn" onclick="showCategory('sexual')">Sexual Wellness</button>
-      <button class="tab-btn" onclick="showCategory('mens')">Men's Health</button>
-      <button class="tab-btn" onclick="showCategory('womens')">Women's Health</button>
-      <button class="tab-btn" onclick="showCategory('skin')">Skin Health</button>
-      <button class="tab-btn" onclick="showCategory('regen')">Regenerative</button>
-      <button class="tab-btn" onclick="showCategory('peptide')">Peptide Therapy</button>
+      <button class="tab-btn active" onclick="showCat('hair', this)">💇 Hair Loss</button>
+      <button class="tab-btn" onclick="showCat('sexual', this)">🧬 Sexual Wellness</button>
+      <button class="tab-btn" onclick="showCat('mens', this)">♂ Men's Health</button>
+      <button class="tab-btn" onclick="showCat('womens', this)">♀ Women's Health</button>
+      <button class="tab-btn" onclick="showCat('skin', this)">✨ Skin Health</button>
+      <button class="tab-btn" onclick="showCat('regen', this)">🔬 Regenerative</button>
+      <button class="tab-btn" onclick="showCat('peptide', this)">🧪 Peptide Therapy</button>
     </div>
 
     <!-- Hair Loss -->
     <div class="services-panel active" id="cat-hair">
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Alma TED Package</div>
-          <div><div class="service-price">$3,900</div><div class="service-orig">$4,500</div><div class="service-save">Save $600</div></div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header">
+          <div class="svc-name">Alma TED Package</div>
+          <div class="svc-pricing"><div class="svc-price">$3,900</div><div class="svc-orig">$4,500</div><div class="svc-save">Save $600</div></div>
         </div>
-        <div>6 sessions included</div>
-        <div class="service-cherry">💳 Cherry: as low as $162/mo</div>
+        <div class="svc-sessions">6 sessions included</div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$162/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">PRP Hair Restoration</div>
-          <div><div class="service-price">$1,080</div><div class="service-orig">$1,200</div><div class="service-save">Save $120</div></div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header">
+          <div class="svc-name">PRP Hair Restoration</div>
+          <div class="svc-pricing"><div class="svc-price">$1,080</div><div class="svc-orig">$1,200</div><div class="svc-save">Save $120</div></div>
         </div>
-        <div>3 sessions included</div>
-        <div class="service-cherry">💳 Cherry: as low as $50/mo</div>
+        <div class="svc-sessions">3 sessions included</div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$50/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
     </div>
 
     <!-- Sexual Wellness -->
     <div class="services-panel" id="cat-sexual">
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Stem Cell Therapy for ED</div>
-          <div><div class="service-price">$1,435</div><div class="service-orig">$1,595</div><div class="service-save">Save $160</div></div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header">
+          <div class="svc-name">Stem Cell Therapy for ED</div>
+          <div class="svc-pricing"><div class="svc-price">$1,435</div><div class="svc-orig">$1,595</div><div class="svc-save">Save $160</div></div>
         </div>
-        <div class="service-cherry">💳 Cherry: as low as $66/mo</div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$66/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">O-Shot</div>
-          <div><div class="service-price">$1,440</div><div class="service-orig">$1,600</div><div class="service-save">Save $160</div></div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header">
+          <div class="svc-name">O-Shot</div>
+          <div class="svc-pricing"><div class="svc-price">$1,440</div><div class="svc-orig">$1,600</div><div class="svc-save">Save $160</div></div>
         </div>
-        <div class="service-cherry">💳 Cherry: as low as $67/mo</div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$67/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Alma Duo Package</div>
-          <div><div class="service-price">$3,150</div><div class="service-orig">$3,500</div><div class="service-save">Save $350</div></div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header">
+          <div class="svc-name">Alma Duo Package</div>
+          <div class="svc-pricing"><div class="svc-price">$3,150</div><div class="svc-orig">$3,500</div><div class="svc-save">Save $350</div></div>
         </div>
-        <div>4 sessions included</div>
-        <div class="service-cherry">💳 Cherry: as low as $146/mo</div>
+        <div class="svc-sessions">4 sessions included</div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$146/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
     </div>
 
     <!-- Men's Health -->
     <div class="services-panel" id="cat-mens">
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Scrotox</div>
-          <div><div class="service-price">$540</div><div class="service-orig">$600</div><div class="service-save">Save $60</div></div>
-        </div>
-        <div class="service-cherry">💳 Cherry: as low as $25/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">Scrotox</div><div class="svc-pricing"><div class="svc-price">$540</div><div class="svc-orig">$600</div><div class="svc-save">Save $60</div></div></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$25/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">BoCox Treatment</div>
-          <div><div class="service-price">$720</div><div class="service-orig">$800</div><div class="service-save">Save $80</div></div>
-        </div>
-        <div class="service-cherry">💳 Cherry: as low as $33/mo</div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">BoCox Treatment</div><div class="svc-pricing"><div class="svc-price">$720</div><div class="svc-orig">$800</div><div class="svc-save">Save $80</div></div></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$33/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">PT-141 – Sexual Wellness</div>
-          <div><div class="service-price">$180</div><div class="service-orig">$200</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $9/mo</div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">PT-141 – Sexual Wellness</div><div class="svc-pricing"><div class="svc-price">$180</div><div class="svc-orig">$200</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$9/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Libido Drive Capsules – 102mg</div>
-          <div><div class="service-price">$315</div><div class="service-orig">$350</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $15/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">Libido Drive Capsules – 102mg</div><div class="svc-pricing"><div class="svc-price">$315</div><div class="svc-orig">$350</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$15/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Kisspeptin – 10mg</div>
-          <div><div class="service-price">$135</div><div class="service-orig">$150</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $7/mo</div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">Kisspeptin – 10mg</div><div class="svc-pricing"><div class="svc-price">$135</div><div class="svc-orig">$150</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$7/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">NAD+ – 1000mg</div>
-          <div><div class="service-price">$202</div><div class="service-orig">$225</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $10/mo</div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">NAD+ – 1000mg</div><div class="svc-pricing"><div class="svc-price">$202</div><div class="svc-orig">$225</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$10/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
+      </div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">Epithalon Capsules – Anti-Aging</div><div class="svc-pricing"><div class="svc-price">$202</div><div class="svc-orig">$225</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$10/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
     </div>
 
     <!-- Women's Health -->
     <div class="services-panel" id="cat-womens">
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">FemiLift Package</div>
-          <div><div class="service-price">$1,980</div><div class="service-orig">$2,200</div><div class="service-save">Save $220</div></div>
-        </div>
-        <div>3 sessions included</div>
-        <div class="service-cherry">💳 Cherry: as low as $92/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">FemiLift Package</div><div class="svc-pricing"><div class="svc-price">$1,980</div><div class="svc-orig">$2,200</div><div class="svc-save">Save $220</div></div></div>
+        <div class="svc-sessions">3 sessions included</div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$92/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Oxytocin – 10mg</div>
-          <div><div class="service-price">$225</div><div class="service-orig">$250</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $11/mo</div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">Oxytocin – 10mg</div><div class="svc-pricing"><div class="svc-price">$225</div><div class="svc-orig">$250</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$11/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Libido Drive Capsules – 102mg</div>
-          <div><div class="service-price">$315</div><div class="service-orig">$350</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $15/mo</div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">Libido Drive Capsules – 102mg</div><div class="svc-pricing"><div class="svc-price">$315</div><div class="svc-orig">$350</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$15/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">GHK-Cu Peptide Serum + SNAP-8</div>
-          <div><div class="service-price">$180</div><div class="service-orig">$200</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $9/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">GHK-Cu Peptide Serum + SNAP-8</div><div class="svc-pricing"><div class="svc-price">$180</div><div class="svc-orig">$200</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$9/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Epithalon Capsules – Anti-Aging</div>
-          <div><div class="service-price">$202</div><div class="service-orig">$225</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $10/mo</div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">Epithalon Capsules – Anti-Aging</div><div class="svc-pricing"><div class="svc-price">$202</div><div class="svc-orig">$225</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$10/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">NAD+ – 1000mg</div>
-          <div><div class="service-price">$202</div><div class="service-orig">$225</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $10/mo</div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">NAD+ – 1000mg</div><div class="svc-pricing"><div class="svc-price">$202</div><div class="svc-orig">$225</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$10/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
     </div>
 
     <!-- Skin Health -->
     <div class="services-panel" id="cat-skin">
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">CO₂ Laser Package</div>
-          <div><div class="service-price">$2,520</div><div class="service-orig">$2,800</div><div class="service-save">Save $280</div></div>
-        </div>
-        <div>3 sessions included</div>
-        <div class="service-cherry">💳 Cherry: as low as $117/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">CO₂ Laser Package</div><div class="svc-pricing"><div class="svc-price">$2,520</div><div class="svc-orig">$2,800</div><div class="svc-save">Save $280</div></div></div>
+        <div class="svc-sessions">3 sessions included</div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$117/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
     </div>
 
     <!-- Regenerative -->
     <div class="services-panel" id="cat-regen">
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Stem Cell Therapy (Degenerative Diseases)</div>
-          <div><div class="service-price">$2,695</div><div class="service-orig">$2,995</div><div class="service-save">Save $300</div></div>
-        </div>
-        <div class="service-cherry">💳 Cherry: as low as $125/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">Stem Cell Therapy (Degenerative Diseases)</div><div class="svc-pricing"><div class="svc-price">$2,695</div><div class="svc-orig">$2,995</div><div class="svc-save">Save $300</div></div></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$125/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Exosome Therapy (Autoimmune)</div>
-          <div><div class="service-price">$2,695</div><div class="service-orig">$2,995</div><div class="service-save">Save $300</div></div>
-        </div>
-        <div class="service-cherry">💳 Cherry: as low as $125/mo</div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">Exosome Therapy (Autoimmune, Health &amp; Wellness)</div><div class="svc-pricing"><div class="svc-price">$2,695</div><div class="svc-orig">$2,995</div><div class="svc-save">Save $300</div></div></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$125/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Stem Cell + Exosomes Bundle</div>
-          <div><div class="service-price">$3,865</div><div class="service-orig">$4,295</div><div class="service-save">Save $430</div></div>
-        </div>
-        <div class="service-cherry">💳 Cherry: as low as $179/mo</div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">Stem Cell + Exosomes Bundle</div><div class="svc-pricing"><div class="svc-price">$3,865</div><div class="svc-orig">$4,295</div><div class="svc-save">Save $430</div></div></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$179/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Book Now</a>
       </div>
     </div>
 
     <!-- Peptide Therapy -->
     <div class="services-panel" id="cat-peptide">
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Semaglutide / GLP-1</div>
-          <div><div class="service-price">$360</div><div class="service-orig">$400</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $17/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">Semaglutide / GLP-1</div><div class="svc-pricing"><div class="svc-price">$360</div><div class="svc-orig">$400</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$17/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Tirzepatide / GLP-2</div>
-          <div><div class="service-price">$495</div><div class="service-orig">$550</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $23/mo</div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">Tirzepatide / GLP-2</div><div class="svc-pricing"><div class="svc-price">$495</div><div class="svc-orig">$550</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$23/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Retatrutide / GLP-3</div>
-          <div><div class="service-price">$450</div><div class="service-orig">$500</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <span class="badge badge-new">NEWEST GLP</span>
-        <div class="service-cherry">💳 Cherry: as low as $21/mo</div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">Retatrutide / GLP-3</div><div class="svc-pricing"><div class="svc-price">$450</div><div class="svc-orig">$500</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span><span class="badge badge-new">NEWEST GLP</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$21/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">BPC-157 Recovery Protocol</div>
-          <div><div class="service-price">$225</div><div class="service-orig">$250</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $11/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">BPC-157 Recovery Protocol</div><div class="svc-pricing"><div class="svc-price">$225</div><div class="svc-orig">$250</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$11/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">NAD+ Nasal Spray – 4500mg</div>
-          <div><div class="service-price">$180</div><div class="service-orig">$200</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $9/mo</div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">CJC-1295 / Ipamorelin Blend</div><div class="svc-pricing"><div class="svc-price">$270</div><div class="svc-orig">$300</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$13/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">NMN Capsules – 500mg</div>
-          <div><div class="service-price">$157</div><div class="service-orig">$175</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $8/mo</div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">NAD+ Nasal Spray – 4500mg</div><div class="svc-pricing"><div class="svc-price">$180</div><div class="svc-orig">$200</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$9/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
-      <div class="service-card">
-        <div class="service-card-top">
-          <div class="service-name">Sema + BPC-157 Combo</div>
-          <div><div class="service-price">$405</div><div class="service-orig">$450</div></div>
-        </div>
-        <span class="badge badge-peplogix">PEPLOGIX</span>
-        <span class="badge badge-ships">SHIPS TO YOU</span>
-        <div class="service-cherry">💳 Cherry: as low as $19/mo</div>
+      <div class="svc-card fade-up">
+        <div class="svc-card-header"><div class="svc-name">NMN Capsules – 500mg</div><div class="svc-pricing"><div class="svc-price">$157</div><div class="svc-orig">$175</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$8/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
+      </div>
+      <div class="svc-card fade-up fade-up-delay">
+        <div class="svc-card-header"><div class="svc-name">Sema + BPC-157 Combo</div><div class="svc-pricing"><div class="svc-price">$405</div><div class="svc-orig">$450</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$19/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
+      </div>
+      <div class="svc-card fade-up fade-up-delay2">
+        <div class="svc-card-header"><div class="svc-name">Ultimate Wellness Bundle (BPC-157 + NAD+)</div><div class="svc-pricing"><div class="svc-price">$360</div><div class="svc-orig">$400</div></div></div>
+        <div class="svc-badges"><span class="badge badge-peplogix">PEPLOGIX</span><span class="badge badge-ships">SHIPS TO YOU</span></div>
+        <div class="svc-cherry">💳 Cherry: as low as <strong>$17/mo</strong></div>
+        <a href="https://urologycenteroc.com/book-appointment" target="_blank" class="svc-book-btn">Order Now</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ── MEMBERSHIPS ── -->
-<section id="memberships" class="memberships-bg">
+<!-- ── CASH SERVICES ── -->
+<section id="cash-services" class="cash-section">
   <div class="container">
-    <div class="section-label">Membership Tiers</div>
-    <h2 class="section-title">Join the Urowell Elite Program</h2>
-    <p class="section-sub">Unlock exclusive discounts, monthly credits, and priority booking with a Urowell membership.</p>
+    <div class="section-eyebrow">Cash-Based Services</div>
+    <h2 class="section-title">Transparent Pricing. No Surprises.</h2>
+    <div class="section-divider" style="background: var(--sand);"></div>
+    <p class="section-sub">Transparent pricing, Cherry payment plans, treatment benefits, and before/after results. Available in English and Spanish.</p>
+    <div class="cash-grid fade-up">
+      <a href="https://urologycenteroc.com/alma-duo" target="_blank" class="cash-card">
+        <div class="cash-card-icon">🔊</div>
+        <div class="cash-card-name">Alma Duo™</div>
+        <div class="cash-card-desc">Acoustic wave therapy for ED and sexual performance optimization.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/ted-hair-restoration" target="_blank" class="cash-card">
+        <div class="cash-card-icon">💇</div>
+        <div class="cash-card-name">TED Hair Restoration</div>
+        <div class="cash-card-desc">Alma TED ultrasound hair restoration — no needles, no downtime.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/femilift" target="_blank" class="cash-card">
+        <div class="cash-card-icon">🌸</div>
+        <div class="cash-card-name">FemiLift</div>
+        <div class="cash-card-desc">Fractional CO₂ laser vaginal rejuvenation for women's health and wellness.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/biote" target="_blank" class="cash-card">
+        <div class="cash-card-icon">⚡</div>
+        <div class="cash-card-name">BioTe Hormonal Optimization</div>
+        <div class="cash-card-desc">Bioidentical hormone pellet therapy for men and women.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/vasectomy" target="_blank" class="cash-card">
+        <div class="cash-card-icon">🏥</div>
+        <div class="cash-card-name">Vasectomy (No Insurance)</div>
+        <div class="cash-card-desc">No-scalpel vasectomy with transparent cash pricing and Cherry financing.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/bocox-scrotox" target="_blank" class="cash-card">
+        <div class="cash-card-icon">♂</div>
+        <div class="cash-card-name">BoCox / Scrotox</div>
+        <div class="cash-card-desc">Botox-based men's health treatments for comfort and confidence.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/stem-cells-exosomes" target="_blank" class="cash-card">
+        <div class="cash-card-icon">🔬</div>
+        <div class="cash-card-name">Stem Cells &amp; Exosomes</div>
+        <div class="cash-card-desc">Hyagen Medical regenerative therapy for degenerative diseases and autoimmune conditions.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/prp" target="_blank" class="cash-card">
+        <div class="cash-card-icon">🩸</div>
+        <div class="cash-card-name">PRP Injections</div>
+        <div class="cash-card-desc">Platelet-rich plasma therapy — economical alternative for hair and sexual wellness.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/peptides" target="_blank" class="cash-card">
+        <div class="cash-card-icon">🧬</div>
+        <div class="cash-card-name">Peptides (Peplogix)</div>
+        <div class="cash-card-desc">GLP-1, BPC-157, NAD+, PT-141 and more — shipped directly to your door.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+      <a href="https://urologycenteroc.com/mens-health-trt" target="_blank" class="cash-card">
+        <div class="cash-card-icon">💪</div>
+        <div class="cash-card-name">Men's Health &amp; TRT</div>
+        <div class="cash-card-desc">Testosterone replacement therapy with Kyzatrex oral — no injections required.</div>
+        <span class="cash-card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <div class="memberships-grid fade-up">
-      <div class="membership-card membership-silver">
-        <div class="tier-name">Silver</div>
-        <div class="tier-price">$149 / month</div>
-        <div class="tier-discount">5%</div>
-        <div class="tier-off">off all services</div>
-        <ul class="tier-benefits">
+<!-- ── MEMBERSHIPS ── -->
+<section id="memberships" class="memberships-section">
+  <div class="container">
+    <div class="section-eyebrow">Membership Tiers</div>
+    <h2 class="section-title">Join the Urowell Elite Program</h2>
+    <div class="section-divider"></div>
+    <p class="section-sub">Unlock exclusive discounts, monthly credits, priority booking, and complimentary treatments with a Urowell Elite membership.</p>
+    <div class="memberships-grid">
+      <div class="mem-card mem-silver fade-up">
+        <div class="mem-tier">Silver</div>
+        <div class="mem-price">$149 / month</div>
+        <div class="mem-discount">5%</div>
+        <div class="mem-off">off all services</div>
+        <ul class="mem-benefits">
           <li>5% off all services</li>
           <li>$25 monthly reward credit</li>
           <li>Banked Urowell Cash</li>
         </ul>
+        <a href="https://apps.apple.com/app/id6754045941" target="_blank" class="mem-cta">Join Silver →</a>
       </div>
-      <div class="membership-card membership-gold">
-        <div class="tier-name">Gold</div>
-        <div class="tier-price">$299 / month</div>
-        <div class="tier-discount">10%</div>
-        <div class="tier-off">off all services</div>
-        <ul class="tier-benefits">
+      <div class="mem-card mem-gold fade-up fade-up-delay">
+        <div class="mem-tier">Gold</div>
+        <div class="mem-price">$299 / month</div>
+        <div class="mem-discount">10%</div>
+        <div class="mem-off">off all services</div>
+        <ul class="mem-benefits">
           <li>10% off all services</li>
           <li>Quarterly TED booster</li>
           <li>Priority booking</li>
           <li>$50 monthly reward credit</li>
         </ul>
+        <a href="https://apps.apple.com/app/id6754045941" target="_blank" class="mem-cta">Join Gold →</a>
       </div>
-      <div class="membership-card membership-platinum">
-        <div class="tier-name">Platinum</div>
-        <div class="tier-price">$499 / month</div>
-        <div class="tier-discount">15%</div>
-        <div class="tier-off">off all services</div>
-        <ul class="tier-benefits">
+      <div class="mem-card mem-platinum fade-up fade-up-delay2">
+        <div class="mem-tier">Platinum</div>
+        <div class="mem-price">$499 / month</div>
+        <div class="mem-discount">15%</div>
+        <div class="mem-off">off all services</div>
+        <ul class="mem-benefits">
           <li>15% off all services</li>
           <li>Annual Alma Duo package</li>
           <li>Quarterly lab panels</li>
           <li>$75 monthly reward credit</li>
         </ul>
+        <a href="https://apps.apple.com/app/id6754045941" target="_blank" class="mem-cta">Join Platinum →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CHERRY SECTION ── -->
-<section class="cherry-section">
+<!-- ── CHERRY FINANCING ── -->
+<section id="financing" class="cherry-section">
   <div class="container">
     <div class="cherry-grid">
-      <div>
-        <div class="section-label">Cherry Financing</div>
+      <div class="fade-up">
+        <div class="section-eyebrow">Cherry Patient Financing</div>
         <h2 class="section-title">Make Wellness Affordable</h2>
-        <p style="color: var(--gray); font-size: 16px; margin-bottom: 8px;">Don't let cost stand between you and your health. Cherry patient financing lets you start your treatment today and pay over time.</p>
+        <div class="section-divider" style="background: var(--green);"></div>
+        <p style="color: var(--gray); font-size: 16px; line-height: 1.7; margin-bottom: 8px;">Don't let cost stand between you and your health. Cherry patient financing lets you start your treatment today and pay over time — with no hard credit pull and instant approval.</p>
         <ol class="cherry-steps">
           <li class="cherry-step">
             <div class="cherry-step-num">1</div>
             <div>
               <div class="cherry-step-title">Apply in 60 Seconds</div>
-              <div class="cherry-step-desc">Soft credit check only — no impact on your credit score. Instant decision.</div>
+              <div class="cherry-step-desc">Soft credit check only — no impact on your credit score. Instant approval decision available.</div>
             </div>
           </li>
           <li class="cherry-step">
             <div class="cherry-step-num">2</div>
             <div>
               <div class="cherry-step-title">Choose Your Plan</div>
-              <div class="cherry-step-desc">Select from plans ranging 6 weeks to 60 months. 0% APR options available.</div>
+              <div class="cherry-step-desc">Select from flexible plans ranging from 6 weeks to 60 months. 0% APR options available.</div>
             </div>
           </li>
           <li class="cherry-step">
             <div class="cherry-step-num">3</div>
             <div>
               <div class="cherry-step-title">Start Your Treatment</div>
-              <div class="cherry-step-desc">Get funded immediately. We receive payment upfront so you can begin right away.</div>
+              <div class="cherry-step-desc">Get funded immediately. We receive payment upfront so you can begin your wellness journey right away.</div>
             </div>
           </li>
         </ol>
-        <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank" class="btn-green" style="display: inline-flex; margin-top: 16px;">
-          Apply for Cherry Financing →
-        </a>
+        <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank" class="btn-green" style="margin-top: 20px;">Apply for Cherry Financing →</a>
       </div>
-      <div class="cherry-card">
+      <div class="cherry-card fade-up fade-up-delay">
         <h3>Cherry by the Numbers</h3>
-        <p style="color: var(--gray); font-size: 14px; margin-bottom: 8px;">Industry-leading patient financing for healthcare & wellness practices.</p>
+        <p style="color: var(--gray); font-size: 14px; margin-bottom: 4px; line-height: 1.6;">Industry-leading patient financing trusted by thousands of healthcare and wellness practices nationwide.</p>
         <div class="cherry-stats">
-          <div class="cherry-stat">
-            <div class="cherry-stat-val">~90%</div>
-            <div class="cherry-stat-label">Approval Rate</div>
-          </div>
-          <div class="cherry-stat">
-            <div class="cherry-stat-val">60s</div>
-            <div class="cherry-stat-label">Application Time</div>
-          </div>
-          <div class="cherry-stat">
-            <div class="cherry-stat-val">0%</div>
-            <div class="cherry-stat-label">APR Options</div>
-          </div>
-          <div class="cherry-stat">
-            <div class="cherry-stat-val">60mo</div>
-            <div class="cherry-stat-label">Max Plan Length</div>
-          </div>
+          <div class="cherry-stat"><div class="cherry-stat-val">~90%</div><div class="cherry-stat-label">Approval Rate</div></div>
+          <div class="cherry-stat"><div class="cherry-stat-val">60s</div><div class="cherry-stat-label">Application Time</div></div>
+          <div class="cherry-stat"><div class="cherry-stat-val">0%</div><div class="cherry-stat-label">APR Options</div></div>
+          <div class="cherry-stat"><div class="cherry-stat-val">60mo</div><div class="cherry-stat-label">Max Plan Length</div></div>
         </div>
-        <div style="background: var(--green-light); border-radius: 12px; padding: 16px; border: 1px solid var(--green-border);">
-          <div style="font-size: 14px; font-weight: 700; color: #15803d; margin-bottom: 4px;">Merchant ID: AJK0BO</div>
-          <div style="font-size: 13px; color: var(--green);">Urowell Integrative Care is a verified Cherry merchant. All financing is handled securely through Cherry's platform.</div>
+        <div class="cherry-merchant-box">
+          <div class="cherry-merchant-id">Merchant ID: AJK0BO</div>
+          <div class="cherry-merchant-desc">Urowell Integrative Care is a verified Cherry merchant. All financing is processed securely through Cherry's HIPAA-compliant platform.</div>
+        </div>
+        <div style="margin-top: 16px; padding: 14px; background: white; border-radius: 12px; border: 1px solid #e5e7eb;">
+          <div style="font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 4px;">Also Accepting</div>
+          <div style="font-size: 13px; color: var(--gray);">Full payment via <strong>Square</strong> — all major credit cards, Apple Pay, and Google Pay accepted. PCI DSS compliant.</div>
         </div>
       </div>
     </div>
@@ -805,87 +891,103 @@
 <!-- ── PEPLOGIX TOP SELLERS ── -->
 <section id="peptides" class="peplogix-section">
   <div class="container">
-    <div class="section-label">Peplogix Peptide Products</div>
+    <div class="section-eyebrow">Peplogix Peptide Products</div>
     <h2 class="section-title">Top Sellers — Men's &amp; Women's Health</h2>
-    <p class="section-sub">Curated peptide and wellness products from Peplogix, available through Urowell. Shipped directly to your door after medical review.</p>
+    <div class="section-divider"></div>
+    <p class="section-sub" style="margin-bottom: 36px;">Curated peptide and wellness products from Peplogix, available through Urowell. Shipped directly to your door after medical review and payment clearance.</p>
 
-    <h3 style="font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px; margin-top: 8px;">Men's Health Top Sellers</h3>
-    <div class="peplogix-grid fade-up" style="margin-bottom: 40px;">
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">PT-141 – 10mg</div>
-        <div class="peplogix-desc">Sexual arousal and erectile function support. Clinically studied peptide for male sexual wellness.</div>
-        <div class="peplogix-price">$180 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$200</span></div>
+    <div class="peplogix-tabs">
+      <button class="peplogix-tab active" onclick="showPepTab('pep-mens', this)">♂ Men's Health</button>
+      <button class="peplogix-tab" onclick="showPepTab('pep-womens', this)">♀ Women's Health</button>
+    </div>
+
+    <div class="peplogix-panel active" id="pep-mens">
+      <div class="pep-card fade-up">
+        <span class="pep-tag">PEPLOGIX — MEN'S HEALTH</span>
+        <div class="pep-name">PT-141 – 10mg</div>
+        <div class="pep-desc">Sexual arousal and erectile function support. Clinically studied peptide for male sexual wellness and libido enhancement.</div>
+        <div class="pep-price-row"><div class="pep-price">$180</div><div class="pep-orig">$200</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $9/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Libido Drive Capsules – 102mg</div>
-        <div class="peplogix-desc">Comprehensive male sexual health blend: PT-141, Oxytocin, VIP, Kisspeptin.</div>
-        <div class="peplogix-price">$315 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$350</span></div>
+      <div class="pep-card fade-up fade-up-delay">
+        <span class="pep-tag">PEPLOGIX — MEN'S HEALTH</span>
+        <div class="pep-name">Libido Drive Capsules – 102mg</div>
+        <div class="pep-desc">Comprehensive male sexual health blend: PT-141, Oxytocin, VIP, and Kisspeptin in a convenient capsule form.</div>
+        <div class="pep-price-row"><div class="pep-price">$315</div><div class="pep-orig">$350</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $15/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Kisspeptin – 10mg</div>
-        <div class="peplogix-desc">Supports testosterone and LH production. Key hormone regulator for male vitality.</div>
-        <div class="peplogix-price">$135 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$150</span></div>
+      <div class="pep-card fade-up fade-up-delay2">
+        <span class="pep-tag">PEPLOGIX — MEN'S HEALTH</span>
+        <div class="pep-name">Kisspeptin – 10mg</div>
+        <div class="pep-desc">Supports testosterone and LH production. Key hormone regulator for male vitality, fertility, and sexual function.</div>
+        <div class="pep-price-row"><div class="pep-price">$135</div><div class="pep-orig">$150</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $7/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">NAD+ – 1000mg</div>
-        <div class="peplogix-desc">Cellular energy and longevity support. Essential for mitochondrial function and healthy aging.</div>
-        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      <div class="pep-card fade-up">
+        <span class="pep-tag">PEPLOGIX — LONGEVITY</span>
+        <div class="pep-name">NAD+ – 1000mg</div>
+        <div class="pep-desc">Cellular energy and longevity support. Essential for mitochondrial function, DNA repair, and healthy aging.</div>
+        <div class="pep-price-row"><div class="pep-price">$202</div><div class="pep-orig">$225</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $10/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Epithalon Capsules – Anti-Aging</div>
-        <div class="peplogix-desc">Telomere support and longevity peptide. Promotes cellular rejuvenation and healthy aging.</div>
-        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      <div class="pep-card fade-up fade-up-delay">
+        <span class="pep-tag">PEPLOGIX — ANTI-AGING</span>
+        <div class="pep-name">Epithalon Capsules</div>
+        <div class="pep-desc">Telomere support and longevity peptide. Promotes cellular rejuvenation, healthy aging, and improved sleep quality.</div>
+        <div class="pep-price-row"><div class="pep-price">$202</div><div class="pep-orig">$225</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $10/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Semaglutide / GLP-1</div>
-        <div class="peplogix-desc">Clinically proven weight management. Reduces appetite and supports metabolic health.</div>
-        <div class="peplogix-price">$360 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$400</span></div>
+      <div class="pep-card fade-up fade-up-delay2">
+        <span class="pep-tag">PEPLOGIX — WEIGHT MANAGEMENT</span>
+        <div class="pep-name">Semaglutide / GLP-1</div>
+        <div class="pep-desc">Clinically proven weight management. Reduces appetite and supports metabolic health and blood sugar regulation.</div>
+        <div class="pep-price-row"><div class="pep-price">$360</div><div class="pep-orig">$400</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $17/mo</div>
       </div>
     </div>
 
-    <h3 style="font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px;">Women's Health Top Sellers</h3>
-    <div class="peplogix-grid fade-up">
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Libido Drive Capsules – 102mg</div>
-        <div class="peplogix-desc">Female sexual wellness blend for HSDD. PT-141, Oxytocin, VIP, Kisspeptin combination.</div>
-        <div class="peplogix-price">$315 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$350</span></div>
+    <div class="peplogix-panel" id="pep-womens">
+      <div class="pep-card fade-up">
+        <span class="pep-tag">PEPLOGIX — WOMEN'S HEALTH</span>
+        <div class="pep-name">Libido Drive Capsules – 102mg</div>
+        <div class="pep-desc">Female sexual wellness blend for HSDD. PT-141, Oxytocin, VIP, and Kisspeptin combination for enhanced intimacy.</div>
+        <div class="pep-price-row"><div class="pep-price">$315</div><div class="pep-orig">$350</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $15/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Oxytocin – 10mg</div>
-        <div class="peplogix-desc">Bonding and intimacy support. Enhances emotional connection and sexual wellness.</div>
-        <div class="peplogix-price">$225 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$250</span></div>
+      <div class="pep-card fade-up fade-up-delay">
+        <span class="pep-tag">PEPLOGIX — WOMEN'S HEALTH</span>
+        <div class="pep-name">Oxytocin – 10mg</div>
+        <div class="pep-desc">Bonding and intimacy support. Enhances emotional connection, sexual wellness, and stress reduction.</div>
+        <div class="pep-price-row"><div class="pep-price">$225</div><div class="pep-orig">$250</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $11/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">GHK-Cu Peptide Serum + SNAP-8</div>
-        <div class="peplogix-desc">Premium anti-aging serum. Reduces fine lines, promotes collagen, and rejuvenates skin.</div>
-        <div class="peplogix-price">$180 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$200</span></div>
+      <div class="pep-card fade-up fade-up-delay2">
+        <span class="pep-tag">PEPLOGIX — SKIN HEALTH</span>
+        <div class="pep-name">GHK-Cu Peptide Serum + SNAP-8</div>
+        <div class="pep-desc">Premium anti-aging serum. Reduces fine lines and wrinkles, promotes collagen synthesis, and rejuvenates skin tone.</div>
+        <div class="pep-price-row"><div class="pep-price">$180</div><div class="pep-orig">$200</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $9/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Epithalon Capsules – Anti-Aging</div>
-        <div class="peplogix-desc">Telomere support for longevity. Promotes cellular health and anti-aging benefits.</div>
-        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      <div class="pep-card fade-up">
+        <span class="pep-tag">PEPLOGIX — ANTI-AGING</span>
+        <div class="pep-name">Epithalon Capsules</div>
+        <div class="pep-desc">Telomere support for longevity. Promotes cellular health, anti-aging benefits, and improved overall vitality.</div>
+        <div class="pep-price-row"><div class="pep-price">$202</div><div class="pep-orig">$225</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $10/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">NAD+ – 1000mg</div>
-        <div class="peplogix-desc">Cellular energy and longevity. Supports healthy aging and metabolic function for women.</div>
-        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      <div class="pep-card fade-up fade-up-delay">
+        <span class="pep-tag">PEPLOGIX — LONGEVITY</span>
+        <div class="pep-name">NAD+ – 1000mg</div>
+        <div class="pep-desc">Cellular energy and longevity. Supports healthy aging, metabolic function, and energy levels for women.</div>
+        <div class="pep-price-row"><div class="pep-price">$202</div><div class="pep-orig">$225</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $10/mo</div>
       </div>
-      <div class="peplogix-card">
-        <span class="peplogix-tag">PEPLOGIX</span>
-        <div class="peplogix-name">Semaglutide / GLP-1</div>
-        <div class="peplogix-desc">Weight management and metabolic support. Clinically proven GLP-1 receptor agonist.</div>
-        <div class="peplogix-price">$360 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$400</span></div>
+      <div class="pep-card fade-up fade-up-delay2">
+        <span class="pep-tag">PEPLOGIX — WEIGHT MANAGEMENT</span>
+        <div class="pep-name">Semaglutide / GLP-1</div>
+        <div class="pep-desc">Weight management and metabolic support. Clinically proven GLP-1 receptor agonist for sustainable weight loss.</div>
+        <div class="pep-price-row"><div class="pep-price">$360</div><div class="pep-orig">$400</div></div>
+        <div class="pep-cherry">💳 Cherry: as low as $17/mo</div>
       </div>
     </div>
   </div>
@@ -893,25 +995,92 @@
 
 <!-- ── APP DOWNLOAD ── -->
 <section id="app" class="app-section">
-  <div class="container" style="text-align: center;">
-    <div class="section-label" style="color: rgba(255,255,255,0.7);">Mobile App</div>
-    <h2 class="section-title" style="color: white;">Download the Urowell App</h2>
-    <p class="section-sub" style="color: rgba(255,255,255,0.85); margin-left: auto; margin-right: auto;">Book services, manage your membership, earn rewards, and pay with Cherry or Square — all from your phone.</p>
-    <div class="app-btns">
-      <a href="https://apps.apple.com/app/id6754045941" class="app-store-btn" target="_blank">
-        <span class="store-icon">🍎</span>
-        <div class="store-text">
-          <span class="store-label">Download on the</span>
-          <span class="store-name">App Store</span>
+  <div class="container">
+    <div class="app-inner">
+      <div class="fade-up">
+        <div class="app-eyebrow">Urowell Elite App</div>
+        <h2 class="app-title">Your Wellness Journey in Your Pocket</h2>
+        <p class="app-desc">Book services, earn rewards, manage your membership, and pay with Cherry or Square — all from your phone. Available on iOS and Android.</p>
+        <ul class="app-features">
+          <li>Book and manage appointments</li>
+          <li>Shop all services with member pricing</li>
+          <li>Pay with Cherry financing or Square</li>
+          <li>Earn rewards with every visit</li>
+          <li>Refer friends and earn together</li>
+          <li>Access education videos and guides</li>
+          <li>Manage Silver, Gold, or Platinum membership</li>
+        </ul>
+        <div class="app-store-btns">
+          <a href="https://apps.apple.com/app/id6754045941" class="store-btn" target="_blank">
+            <span class="s-icon">🍎</span>
+            <div><span class="s-label">Download on the</span><span class="s-name">App Store</span></div>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.urowell.elite" class="store-btn" target="_blank">
+            <span class="s-icon">▶</span>
+            <div><span class="s-label">Get it on</span><span class="s-name">Google Play</span></div>
+          </a>
         </div>
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.urowell.elite" class="app-store-btn" target="_blank">
-        <span class="store-icon">▶</span>
-        <div class="store-text">
-          <span class="store-label">Get it on</span>
-          <span class="store-name">Google Play</span>
+      </div>
+      <div class="app-mockup fade-up fade-up-delay">
+        <div class="app-phone-frame">
+          <div class="app-phone-screen">
+            <div class="app-screen-header">
+              <div class="app-screen-logo">🌿 UrowellElite</div>
+              <div class="app-screen-greeting">Good morning, Khaled<b>You're 2 visits away from your next reward</b></div>
+            </div>
+            <div class="app-screen-shop">
+              <div class="app-screen-shop-title">Shop<br>Services</div>
+            </div>
+            <div class="app-screen-grid">
+              <div class="app-screen-card"><div class="app-screen-card-title">💳 Memberships</div></div>
+              <div class="app-screen-card"><div class="app-screen-card-title">🎁 Rewards</div></div>
+              <div class="app-screen-card"><div class="app-screen-card-title">⭐ Rewards</div></div>
+              <div class="app-screen-card"><div class="app-screen-card-title">👥 Refer a Friend</div></div>
+            </div>
+            <div style="padding: 8px 0 4px; font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.7);">Your Membership</div>
+            <div class="app-screen-mem">
+              <div class="app-screen-mem-label">Member since Jan 2024</div>
+              <div class="app-screen-mem-tier">Gold</div>
+            </div>
+          </div>
         </div>
-      </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PATIENT RESOURCES ── -->
+<section class="resources-section">
+  <div class="container">
+    <div class="section-eyebrow">Patient Resources</div>
+    <h2 class="section-title">Prepare for Your Visit</h2>
+    <div class="section-divider"></div>
+    <p class="section-sub">Everything you need before, during, and after your appointment — from the comfort of your home.</p>
+    <div class="resources-grid fade-up">
+      <div class="resource-card">
+        <div class="resource-icon">📋</div>
+        <div class="resource-title">New Patient Form</div>
+        <div class="resource-desc">Complete your intake securely before your arrival. Save time and get the most out of your first visit.</div>
+        <a href="https://urologycenteroc.com/new-patient" target="_blank" class="resource-link">View Intake Info →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">💰</div>
+        <div class="resource-title">Insurance &amp; Billing</div>
+        <div class="resource-desc">View accepted insurance providers and payment options including Cherry financing and Square.</div>
+        <a href="https://urologycenteroc.com/billing" target="_blank" class="resource-link">View Details →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📍</div>
+        <div class="resource-title">Location &amp; Hours</div>
+        <div class="resource-desc">18800 Delaware St, Suite 750, Huntington Beach, CA 92648. Mon–Thu 9am–5pm, Fri Aesthetics/VIP.</div>
+        <a href="https://maps.google.com/?q=18800+Delaware+St+Suite+750+Huntington+Beach+CA" target="_blank" class="resource-link">Get Directions →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📱</div>
+        <div class="resource-title">Download the App</div>
+        <div class="resource-desc">Manage appointments, earn rewards, and access your membership on iOS or Android.</div>
+        <a href="#app" class="resource-link">Get the App →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -919,11 +1088,18 @@
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="./assets/logo.png" alt="Urowell Logo" />
-      <div class="footer-brand-name">UROWELL</div>
-      <div class="footer-brand-sub">INTEGRATIVE CARE</div>
-      <p>Premium integrative urology and wellness services by Uro Center OC. Your wellness journey starts here.</p>
+    <div>
+      <div class="footer-logo">
+        <img src="./assets/logo.png" alt="Urowell Logo" />
+        <div>
+          <div class="footer-brand-name">UROWELL</div>
+          <div class="footer-brand-sub">Integrative Care</div>
+        </div>
+      </div>
+      <p class="footer-about">Premium integrative urology and wellness services by Uro Center OC. Your wellness journey starts here — in Huntington Beach, California.</p>
+      <div class="footer-contact-item"><span class="footer-contact-icon">📍</span><span>18800 Delaware St, Suite 750<br>Huntington Beach, CA 92648</span></div>
+      <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><a href="tel:7145461121" style="color:rgba(255,255,255,0.75);text-decoration:none;">(714) 546-1121</a></div>
+      <div class="footer-contact-item"><span class="footer-contact-icon">✉️</span><a href="mailto:info@urologycenteroc.com" style="color:rgba(255,255,255,0.75);text-decoration:none;">info@urologycenteroc.com</a></div>
     </div>
     <div class="footer-col">
       <h4>Services</h4>
@@ -931,56 +1107,79 @@
       <a href="#services">Sexual Wellness</a>
       <a href="#services">Men's Health</a>
       <a href="#services">Women's Health</a>
-      <a href="#services">Peptide Therapy</a>
+      <a href="#services">Skin Health</a>
       <a href="#services">Regenerative Medicine</a>
+      <a href="#services">Peptide Therapy</a>
     </div>
     <div class="footer-col">
       <h4>Membership</h4>
-      <a href="#memberships">Silver</a>
-      <a href="#memberships">Gold</a>
-      <a href="#memberships">Platinum</a>
+      <a href="#memberships">Silver — $149/mo</a>
+      <a href="#memberships">Gold — $299/mo</a>
+      <a href="#memberships">Platinum — $499/mo</a>
       <a href="#financing">Cherry Financing</a>
-    </div>
-    <div class="footer-col">
-      <h4>Links</h4>
       <a href="https://apps.apple.com/app/id6754045941" target="_blank">iOS App</a>
       <a href="https://play.google.com/store/apps/details?id=com.urowell.elite" target="_blank">Android App</a>
-      <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank">Cherry Financing</a>
-      <a href="/support">Support</a>
-      <a href="/privacy">Privacy Policy</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <div class="footer-hours">
+        <span>Mon – Thu</span><br>9:00 AM – 5:00 PM<br><br>
+        <span>Friday</span><br>Aesthetics / VIP Only<br><br>
+        <span>Sat – Sun</span><br>Closed
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 Uro Center OC. All rights reserved.</p>
-    <p>Powered by <a href="https://withcherry.com" target="_blank" style="color: rgba(255,255,255,0.8);">Cherry</a> &amp; <a href="https://squareup.com" target="_blank" style="color: rgba(255,255,255,0.8);">Square</a></p>
+    <p>© 2026 Uro Center OC. All Rights Reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a></p>
+    <div class="footer-payment-icons">
+      <span class="payment-icon-badge">Cherry</span>
+      <span class="payment-icon-badge">Square</span>
+      <span class="payment-icon-badge">Apple Pay</span>
+      <span class="payment-icon-badge">Visa / MC</span>
+    </div>
   </div>
 </footer>
 
 <script>
-  // Mobile menu toggle
   function toggleMenu() {
-    const links = document.getElementById('navLinks');
-    links.classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
   }
 
-  // Service category tabs
-  function showCategory(cat) {
+  function showCat(cat, btn) {
     document.querySelectorAll('.services-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('#serviceTabs .tab-btn').forEach(b => b.classList.remove('active'));
     document.getElementById('cat-' + cat).classList.add('active');
-    event.target.classList.add('active');
+    btn.classList.add('active');
+    // Re-trigger fade animations
+    document.querySelectorAll('#cat-' + cat + ' .fade-up').forEach(el => {
+      el.classList.remove('visible');
+      setTimeout(() => el.classList.add('visible'), 50);
+    });
+  }
+
+  function showPepTab(id, btn) {
+    document.querySelectorAll('.peplogix-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.peplogix-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    document.querySelectorAll('#' + id + ' .fade-up').forEach(el => {
+      el.classList.remove('visible');
+      setTimeout(() => el.classList.add('visible'), 50);
+    });
   }
 
   // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  }, { threshold: 0.1 });
-
+  }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Close mobile menu on scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('mobileMenu').classList.remove('open');
+  });
 </script>
 </body>
 </html>
