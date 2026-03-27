@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urowell Integrative Care — Your Wellness Journey Starts Here</title>
+  <meta name="description" content="Urowell Integrative Care by Uro Center OC. Premium integrative urology and wellness services. Book appointments, shop services, manage your membership, and earn rewards. Cherry financing available." />
+  <meta name="keywords" content="integrative care, urology, wellness, peptide therapy, GLP-1, semaglutide, hair restoration, sexual wellness, men's health, women's health, regenerative medicine, stem cell therapy, NAD+, Cherry financing, Square payment" />
+  <meta property="og:title" content="Urowell Integrative Care" />
+  <meta property="og:description" content="Book premium wellness services, earn rewards, and manage your membership — all in one place." />
+  <meta property="og:image" content="https://urowellintegrativecare.com/assets/logo.png" />
+  <meta property="og:url" content="https://urowellintegrativecare.com" />
+  <link rel="icon" href="./assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #2D7D7D;
+      --teal-dark: #1a5c5c;
+      --teal-mid: #3d9999;
+      --teal-light: #e0f2f2;
+      --cream: #f5f0e8;
+      --sand: #c8b89a;
+      --sand-dark: #a89070;
+      --white: #ffffff;
+      --dark: #1a3a3a;
+      --gray: #6b7280;
+      --green: #16a34a;
+      --green-light: #f0fdf4;
+      --green-border: #bbf7d0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(45, 125, 125, 0.97);
+      backdrop-filter: blur(12px);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo img { width: 44px; height: 44px; object-fit: contain; border-radius: 10px; background: white; padding: 4px; }
+    .nav-brand { display: flex; flex-direction: column; }
+    .nav-brand-name { font-size: 18px; font-weight: 800; color: white; letter-spacing: 2px; line-height: 1; }
+    .nav-brand-sub { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.8); letter-spacing: 3px; }
+    .nav-links { display: flex; gap: 8px; align-items: center; }
+    .nav-links a {
+      color: rgba(255,255,255,0.9); text-decoration: none;
+      font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.15); }
+    .nav-cta {
+      background: white !important; color: var(--teal) !important;
+      font-weight: 700 !important; border-radius: 10px !important;
+    }
+    .nav-cta:hover { background: var(--cream) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 60%, #0f3333 100%);
+      padding: 80px 24px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: -40px;
+      width: 200px; height: 200px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+    .hero-logo { width: 100px; height: 100px; object-fit: contain; background: white; border-radius: 24px; padding: 8px; margin: 0 auto 24px; display: block; box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
+    .hero h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 16px; }
+    .hero p { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 40px; }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white; color: var(--teal);
+      padding: 16px 28px; border-radius: 14px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.15); color: white;
+      border: 2px solid rgba(255,255,255,0.4);
+      padding: 16px 28px; border-radius: 14px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+    .btn-green {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green); color: white;
+      padding: 16px 28px; border-radius: 14px;
+      font-size: 16px; font-weight: 700; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(22,163,74,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-green:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(22,163,74,0.45); }
+
+    /* ── SECTIONS ── */
+    section { padding: 72px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
+    .section-title { font-size: clamp(26px, 4vw, 40px); font-weight: 800; color: var(--dark); margin-bottom: 16px; line-height: 1.2; }
+    .section-sub { font-size: 17px; color: var(--gray); max-width: 600px; margin-bottom: 48px; }
+
+    /* ── PAYMENT BANNER ── */
+    .payment-banner {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 2px solid var(--green-border);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .payment-banner-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--green); display: flex; align-items: center; justify-content: center;
+      font-size: 28px; font-weight: 900; color: white; flex-shrink: 0;
+    }
+    .payment-banner h3 { font-size: 22px; font-weight: 800; color: #15803d; margin-bottom: 6px; }
+    .payment-banner p { font-size: 15px; color: #16a34a; }
+    .payment-banner a {
+      margin-left: auto; background: var(--green); color: white;
+      padding: 12px 24px; border-radius: 12px; text-decoration: none;
+      font-weight: 700; font-size: 15px; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .payment-banner a:hover { background: #15803d; }
+
+    .payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .payment-card {
+      background: white; border-radius: 20px; padding: 28px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .payment-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+    .payment-card-icon { font-size: 36px; margin-bottom: 12px; }
+    .payment-card h3 { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    .payment-card p { font-size: 14px; color: var(--gray); margin-bottom: 16px; }
+    .payment-tag {
+      display: inline-block; padding: 4px 12px; border-radius: 20px;
+      font-size: 12px; font-weight: 700;
+    }
+    .tag-teal { background: var(--teal-light); color: var(--teal); }
+    .tag-green { background: var(--green-light); color: var(--green); }
+
+    /* ── SERVICES ── */
+    .services-bg { background: white; }
+    .services-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+    .tab-btn {
+      padding: 10px 18px; border-radius: 20px; border: 2px solid #e5e7eb;
+      background: white; color: var(--gray); font-size: 14px; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .tab-btn.active, .tab-btn:hover { background: var(--teal); color: white; border-color: var(--teal); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .service-card {
+      background: var(--cream); border-radius: 20px; padding: 24px;
+      border: 2px solid transparent; transition: all 0.2s; cursor: pointer;
+    }
+    .service-card:hover { border-color: var(--teal); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,125,125,0.12); }
+    .service-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .service-name { font-size: 16px; font-weight: 700; color: var(--dark); flex: 1; margin-right: 12px; }
+    .service-price { font-size: 20px; font-weight: 900; color: var(--teal); }
+    .service-orig { font-size: 12px; color: var(--gray); text-decoration: line-through; text-align: right; }
+    .service-save { font-size: 12px; color: var(--green); text-align: right; }
+    .service-cherry { background: var(--green-light); border-radius: 8px; padding: 8px 12px; font-size: 13px; color: var(--green); font-weight: 600; margin-top: 12px; }
+    .badge { display: inline-block; padding: 3px 8px; border-radius: 8px; font-size: 11px; font-weight: 700; margin-right: 4px; margin-bottom: 4px; }
+    .badge-peplogix { background: #e0f2fe; color: #0369a1; }
+    .badge-ships { background: var(--green-light); color: var(--green); }
+    .badge-new { background: #fef3c7; color: #d97706; }
+
+    /* ── MEMBERSHIPS ── */
+    .memberships-bg { background: var(--cream); }
+    .memberships-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+    .membership-card {
+      border-radius: 24px; padding: 28px; color: white;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .membership-card:hover { transform: translateY(-4px); }
+    .membership-silver { background: linear-gradient(135deg, #d1d5db, #9ca3af); }
+    .membership-gold { background: linear-gradient(135deg, #fbbf24, #d97706); }
+    .membership-platinum { background: linear-gradient(135deg, #4b5563, #111827); }
+    .membership-card .tier-name { font-size: 28px; font-weight: 900; margin-bottom: 4px; }
+    .membership-silver .tier-name { color: #1f2937; }
+    .membership-gold .tier-name { color: #1c1917; }
+    .membership-platinum .tier-name { color: #f9fafb; }
+    .tier-price { font-size: 16px; font-weight: 600; margin-bottom: 20px; opacity: 0.8; }
+    .tier-discount { font-size: 40px; font-weight: 900; margin-bottom: 4px; }
+    .tier-off { font-size: 14px; font-weight: 600; opacity: 0.8; margin-bottom: 20px; }
+    .tier-benefits { list-style: none; }
+    .tier-benefits li { font-size: 14px; padding: 6px 0; border-top: 1px solid rgba(255,255,255,0.2); }
+    .tier-benefits li::before { content: '✓ '; font-weight: 700; }
+    .membership-silver .tier-benefits li { color: #1f2937; border-top-color: rgba(0,0,0,0.1); }
+    .membership-gold .tier-benefits li { color: #1c1917; border-top-color: rgba(0,0,0,0.1); }
+
+    /* ── APP DOWNLOAD ── */
+    .app-section {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      text-align: center;
+    }
+    .app-section h2 { color: white; }
+    .app-section .section-sub { color: rgba(255,255,255,0.85); margin-left: auto; margin-right: auto; }
+    .app-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .app-store-btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.4);
+      color: white; padding: 14px 24px; border-radius: 14px; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .app-store-btn:hover { background: rgba(255,255,255,0.25); }
+    .app-store-btn .store-icon { font-size: 28px; }
+    .app-store-btn .store-text { text-align: left; }
+    .app-store-btn .store-label { font-size: 11px; opacity: 0.8; display: block; }
+    .app-store-btn .store-name { font-size: 18px; font-weight: 700; display: block; }
+
+    /* ── CHERRY SECTION ── */
+    .cherry-section { background: var(--green-light); }
+    .cherry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    .cherry-steps { list-style: none; margin-top: 24px; }
+    .cherry-step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .cherry-step-num {
+      width: 36px; height: 36px; border-radius: 50%; background: var(--green);
+      color: white; font-weight: 800; font-size: 16px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .cherry-step-title { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .cherry-step-desc { font-size: 14px; color: var(--gray); }
+    .cherry-card {
+      background: white; border-radius: 24px; padding: 32px;
+      box-shadow: 0 8px 32px rgba(22,163,74,0.15);
+      border: 2px solid var(--green-border);
+    }
+    .cherry-card h3 { font-size: 24px; font-weight: 800; color: #15803d; margin-bottom: 8px; }
+    .cherry-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .cherry-stat { text-align: center; background: var(--green-light); border-radius: 12px; padding: 16px; }
+    .cherry-stat-val { font-size: 28px; font-weight: 900; color: var(--green); }
+    .cherry-stat-label { font-size: 12px; color: var(--gray); margin-top: 4px; }
+
+    /* ── PEPLOGIX ── */
+    .peplogix-section { background: white; }
+    .peplogix-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .peplogix-card {
+      background: var(--cream); border-radius: 20px; padding: 24px;
+      border: 2px solid transparent; transition: all 0.2s;
+    }
+    .peplogix-card:hover { border-color: #0369a1; transform: translateY(-2px); }
+    .peplogix-tag { background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 10px; }
+    .peplogix-name { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .peplogix-desc { font-size: 13px; color: var(--gray); margin-bottom: 12px; }
+    .peplogix-price { font-size: 20px; font-weight: 900; color: var(--teal); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--teal-dark);
+      color: rgba(255,255,255,0.8);
+      padding: 48px 24px 32px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto 40px; }
+    .footer-brand img { width: 56px; height: 56px; object-fit: contain; background: white; border-radius: 12px; padding: 6px; margin-bottom: 12px; }
+    .footer-brand-name { font-size: 20px; font-weight: 800; color: white; letter-spacing: 2px; }
+    .footer-brand-sub { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 3px; margin-bottom: 12px; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; }
+    .footer-col h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 8px; transition: color 0.2s; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 12px; }
+    .footer-bottom p { font-size: 13px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: absolute;
+        top: 72px; left: 0; right: 0; background: var(--teal-dark);
+        padding: 16px; gap: 4px; z-index: 99;
+      }
+      .payment-grid { grid-template-columns: 1fr; }
+      .cherry-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .payment-banner { flex-direction: column; }
+      .payment-banner a { margin-left: 0; width: 100%; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .cherry-stats { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── ACTIVE SERVICES ── */
+    .services-panel { display: none; }
+    .services-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="./assets/logo.png" alt="Urowell Logo" />
+    <div class="nav-brand">
+      <span class="nav-brand-name">UROWELL</span>
+      <span class="nav-brand-sub">INTEGRATIVE CARE</span>
+    </div>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#services">Services</a>
+    <a href="#memberships">Memberships</a>
+    <a href="#financing">Financing</a>
+    <a href="#peptides">Peptides</a>
+    <a href="#app">Get the App</a>
+    <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank" class="nav-cta">Apply for Financing</a>
+  </div>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <img src="./assets/logo.png" alt="Urowell Integrative Care Logo" class="hero-logo" />
+  <h1>Your Wellness<br>Journey Starts Here</h1>
+  <p>Book premium services, earn rewards, and manage your membership — all in one place. Flexible payment options available.</p>
+  <div class="hero-btns">
+    <a href="https://apps.apple.com/app/id6754045941" class="btn-primary" target="_blank">
+      🍎 Download on App Store
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.urowell.elite" class="btn-primary" target="_blank">
+      ▶ Get it on Google Play
+    </a>
+    <a href="https://pay.withcherry.com/?merchantId=AJK0BO" class="btn-green" target="_blank">
+      💳 Apply for Financing
+    </a>
+  </div>
+</section>
+
+<!-- ── PAYMENT OPTIONS ── -->
+<section id="financing" style="background: white;">
+  <div class="container">
+    <div class="section-label">Payment Options</div>
+    <h2 class="section-title">Flexible Ways to Pay</h2>
+    <p class="section-sub">We offer two convenient payment methods — pay in full via Square, or spread the cost with Cherry patient financing.</p>
+
+    <div class="payment-banner fade-up">
+      <div class="payment-banner-icon">%</div>
+      <div>
+        <h3>Cherry Patient Financing — Now Available</h3>
+        <p>Apply in 60 seconds · ~90% approval rate · 0% APR options · Plans from 6 weeks to 60 months · No hard credit pull</p>
+      </div>
+      <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank">Apply Now →</a>
+    </div>
+
+    <div class="payment-grid fade-up">
+      <div class="payment-card">
+        <div class="payment-card-icon">💳</div>
+        <h3>Pay in Full</h3>
+        <p>Secure, instant payment powered by Square. Accepts all major credit cards and Apple Pay. PCI DSS compliant — your data is always protected.</p>
+        <span class="payment-tag tag-teal">Square · Apple Pay</span>
+        <span class="payment-tag tag-teal">All Major Cards</span>
+      </div>
+      <div class="payment-card">
+        <div class="payment-card-icon">🌿</div>
+        <h3>Cherry Payment Plans</h3>
+        <p>Split your treatment cost into affordable monthly payments. Apply directly in the app or online. Instant approval decision with no impact on your credit score.</p>
+        <span class="payment-tag tag-green">0% APR Options</span>
+        <span class="payment-tag tag-green">6 Weeks – 60 Months</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="services" class="services-bg">
+  <div class="container">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Premium Wellness Services</h2>
+    <p class="section-sub">Browse our full range of integrative urology and wellness treatments. Member pricing shown.</p>
+
+    <div class="services-tabs" id="serviceTabs">
+      <button class="tab-btn active" onclick="showCategory('hair')">Hair Loss</button>
+      <button class="tab-btn" onclick="showCategory('sexual')">Sexual Wellness</button>
+      <button class="tab-btn" onclick="showCategory('mens')">Men's Health</button>
+      <button class="tab-btn" onclick="showCategory('womens')">Women's Health</button>
+      <button class="tab-btn" onclick="showCategory('skin')">Skin Health</button>
+      <button class="tab-btn" onclick="showCategory('regen')">Regenerative</button>
+      <button class="tab-btn" onclick="showCategory('peptide')">Peptide Therapy</button>
+    </div>
+
+    <!-- Hair Loss -->
+    <div class="services-panel active" id="cat-hair">
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Alma TED Package</div>
+          <div><div class="service-price">$3,900</div><div class="service-orig">$4,500</div><div class="service-save">Save $600</div></div>
+        </div>
+        <div>6 sessions included</div>
+        <div class="service-cherry">💳 Cherry: as low as $162/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">PRP Hair Restoration</div>
+          <div><div class="service-price">$1,080</div><div class="service-orig">$1,200</div><div class="service-save">Save $120</div></div>
+        </div>
+        <div>3 sessions included</div>
+        <div class="service-cherry">💳 Cherry: as low as $50/mo</div>
+      </div>
+    </div>
+
+    <!-- Sexual Wellness -->
+    <div class="services-panel" id="cat-sexual">
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Stem Cell Therapy for ED</div>
+          <div><div class="service-price">$1,435</div><div class="service-orig">$1,595</div><div class="service-save">Save $160</div></div>
+        </div>
+        <div class="service-cherry">💳 Cherry: as low as $66/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">O-Shot</div>
+          <div><div class="service-price">$1,440</div><div class="service-orig">$1,600</div><div class="service-save">Save $160</div></div>
+        </div>
+        <div class="service-cherry">💳 Cherry: as low as $67/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Alma Duo Package</div>
+          <div><div class="service-price">$3,150</div><div class="service-orig">$3,500</div><div class="service-save">Save $350</div></div>
+        </div>
+        <div>4 sessions included</div>
+        <div class="service-cherry">💳 Cherry: as low as $146/mo</div>
+      </div>
+    </div>
+
+    <!-- Men's Health -->
+    <div class="services-panel" id="cat-mens">
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Scrotox</div>
+          <div><div class="service-price">$540</div><div class="service-orig">$600</div><div class="service-save">Save $60</div></div>
+        </div>
+        <div class="service-cherry">💳 Cherry: as low as $25/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">BoCox Treatment</div>
+          <div><div class="service-price">$720</div><div class="service-orig">$800</div><div class="service-save">Save $80</div></div>
+        </div>
+        <div class="service-cherry">💳 Cherry: as low as $33/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">PT-141 – Sexual Wellness</div>
+          <div><div class="service-price">$180</div><div class="service-orig">$200</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $9/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Libido Drive Capsules – 102mg</div>
+          <div><div class="service-price">$315</div><div class="service-orig">$350</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $15/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Kisspeptin – 10mg</div>
+          <div><div class="service-price">$135</div><div class="service-orig">$150</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $7/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">NAD+ – 1000mg</div>
+          <div><div class="service-price">$202</div><div class="service-orig">$225</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $10/mo</div>
+      </div>
+    </div>
+
+    <!-- Women's Health -->
+    <div class="services-panel" id="cat-womens">
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">FemiLift Package</div>
+          <div><div class="service-price">$1,980</div><div class="service-orig">$2,200</div><div class="service-save">Save $220</div></div>
+        </div>
+        <div>3 sessions included</div>
+        <div class="service-cherry">💳 Cherry: as low as $92/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Oxytocin – 10mg</div>
+          <div><div class="service-price">$225</div><div class="service-orig">$250</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $11/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Libido Drive Capsules – 102mg</div>
+          <div><div class="service-price">$315</div><div class="service-orig">$350</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $15/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">GHK-Cu Peptide Serum + SNAP-8</div>
+          <div><div class="service-price">$180</div><div class="service-orig">$200</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $9/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Epithalon Capsules – Anti-Aging</div>
+          <div><div class="service-price">$202</div><div class="service-orig">$225</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $10/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">NAD+ – 1000mg</div>
+          <div><div class="service-price">$202</div><div class="service-orig">$225</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $10/mo</div>
+      </div>
+    </div>
+
+    <!-- Skin Health -->
+    <div class="services-panel" id="cat-skin">
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">CO₂ Laser Package</div>
+          <div><div class="service-price">$2,520</div><div class="service-orig">$2,800</div><div class="service-save">Save $280</div></div>
+        </div>
+        <div>3 sessions included</div>
+        <div class="service-cherry">💳 Cherry: as low as $117/mo</div>
+      </div>
+    </div>
+
+    <!-- Regenerative -->
+    <div class="services-panel" id="cat-regen">
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Stem Cell Therapy (Degenerative Diseases)</div>
+          <div><div class="service-price">$2,695</div><div class="service-orig">$2,995</div><div class="service-save">Save $300</div></div>
+        </div>
+        <div class="service-cherry">💳 Cherry: as low as $125/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Exosome Therapy (Autoimmune)</div>
+          <div><div class="service-price">$2,695</div><div class="service-orig">$2,995</div><div class="service-save">Save $300</div></div>
+        </div>
+        <div class="service-cherry">💳 Cherry: as low as $125/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Stem Cell + Exosomes Bundle</div>
+          <div><div class="service-price">$3,865</div><div class="service-orig">$4,295</div><div class="service-save">Save $430</div></div>
+        </div>
+        <div class="service-cherry">💳 Cherry: as low as $179/mo</div>
+      </div>
+    </div>
+
+    <!-- Peptide Therapy -->
+    <div class="services-panel" id="cat-peptide">
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Semaglutide / GLP-1</div>
+          <div><div class="service-price">$360</div><div class="service-orig">$400</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $17/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Tirzepatide / GLP-2</div>
+          <div><div class="service-price">$495</div><div class="service-orig">$550</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $23/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Retatrutide / GLP-3</div>
+          <div><div class="service-price">$450</div><div class="service-orig">$500</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <span class="badge badge-new">NEWEST GLP</span>
+        <div class="service-cherry">💳 Cherry: as low as $21/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">BPC-157 Recovery Protocol</div>
+          <div><div class="service-price">$225</div><div class="service-orig">$250</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $11/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">NAD+ Nasal Spray – 4500mg</div>
+          <div><div class="service-price">$180</div><div class="service-orig">$200</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $9/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">NMN Capsules – 500mg</div>
+          <div><div class="service-price">$157</div><div class="service-orig">$175</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $8/mo</div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <div class="service-name">Sema + BPC-157 Combo</div>
+          <div><div class="service-price">$405</div><div class="service-orig">$450</div></div>
+        </div>
+        <span class="badge badge-peplogix">PEPLOGIX</span>
+        <span class="badge badge-ships">SHIPS TO YOU</span>
+        <div class="service-cherry">💳 Cherry: as low as $19/mo</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── MEMBERSHIPS ── -->
+<section id="memberships" class="memberships-bg">
+  <div class="container">
+    <div class="section-label">Membership Tiers</div>
+    <h2 class="section-title">Join the Urowell Elite Program</h2>
+    <p class="section-sub">Unlock exclusive discounts, monthly credits, and priority booking with a Urowell membership.</p>
+
+    <div class="memberships-grid fade-up">
+      <div class="membership-card membership-silver">
+        <div class="tier-name">Silver</div>
+        <div class="tier-price">$149 / month</div>
+        <div class="tier-discount">5%</div>
+        <div class="tier-off">off all services</div>
+        <ul class="tier-benefits">
+          <li>5% off all services</li>
+          <li>$25 monthly reward credit</li>
+          <li>Banked Urowell Cash</li>
+        </ul>
+      </div>
+      <div class="membership-card membership-gold">
+        <div class="tier-name">Gold</div>
+        <div class="tier-price">$299 / month</div>
+        <div class="tier-discount">10%</div>
+        <div class="tier-off">off all services</div>
+        <ul class="tier-benefits">
+          <li>10% off all services</li>
+          <li>Quarterly TED booster</li>
+          <li>Priority booking</li>
+          <li>$50 monthly reward credit</li>
+        </ul>
+      </div>
+      <div class="membership-card membership-platinum">
+        <div class="tier-name">Platinum</div>
+        <div class="tier-price">$499 / month</div>
+        <div class="tier-discount">15%</div>
+        <div class="tier-off">off all services</div>
+        <ul class="tier-benefits">
+          <li>15% off all services</li>
+          <li>Annual Alma Duo package</li>
+          <li>Quarterly lab panels</li>
+          <li>$75 monthly reward credit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CHERRY SECTION ── -->
+<section class="cherry-section">
+  <div class="container">
+    <div class="cherry-grid">
+      <div>
+        <div class="section-label">Cherry Financing</div>
+        <h2 class="section-title">Make Wellness Affordable</h2>
+        <p style="color: var(--gray); font-size: 16px; margin-bottom: 8px;">Don't let cost stand between you and your health. Cherry patient financing lets you start your treatment today and pay over time.</p>
+        <ol class="cherry-steps">
+          <li class="cherry-step">
+            <div class="cherry-step-num">1</div>
+            <div>
+              <div class="cherry-step-title">Apply in 60 Seconds</div>
+              <div class="cherry-step-desc">Soft credit check only — no impact on your credit score. Instant decision.</div>
+            </div>
+          </li>
+          <li class="cherry-step">
+            <div class="cherry-step-num">2</div>
+            <div>
+              <div class="cherry-step-title">Choose Your Plan</div>
+              <div class="cherry-step-desc">Select from plans ranging 6 weeks to 60 months. 0% APR options available.</div>
+            </div>
+          </li>
+          <li class="cherry-step">
+            <div class="cherry-step-num">3</div>
+            <div>
+              <div class="cherry-step-title">Start Your Treatment</div>
+              <div class="cherry-step-desc">Get funded immediately. We receive payment upfront so you can begin right away.</div>
+            </div>
+          </li>
+        </ol>
+        <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank" class="btn-green" style="display: inline-flex; margin-top: 16px;">
+          Apply for Cherry Financing →
+        </a>
+      </div>
+      <div class="cherry-card">
+        <h3>Cherry by the Numbers</h3>
+        <p style="color: var(--gray); font-size: 14px; margin-bottom: 8px;">Industry-leading patient financing for healthcare & wellness practices.</p>
+        <div class="cherry-stats">
+          <div class="cherry-stat">
+            <div class="cherry-stat-val">~90%</div>
+            <div class="cherry-stat-label">Approval Rate</div>
+          </div>
+          <div class="cherry-stat">
+            <div class="cherry-stat-val">60s</div>
+            <div class="cherry-stat-label">Application Time</div>
+          </div>
+          <div class="cherry-stat">
+            <div class="cherry-stat-val">0%</div>
+            <div class="cherry-stat-label">APR Options</div>
+          </div>
+          <div class="cherry-stat">
+            <div class="cherry-stat-val">60mo</div>
+            <div class="cherry-stat-label">Max Plan Length</div>
+          </div>
+        </div>
+        <div style="background: var(--green-light); border-radius: 12px; padding: 16px; border: 1px solid var(--green-border);">
+          <div style="font-size: 14px; font-weight: 700; color: #15803d; margin-bottom: 4px;">Merchant ID: AJK0BO</div>
+          <div style="font-size: 13px; color: var(--green);">Urowell Integrative Care is a verified Cherry merchant. All financing is handled securely through Cherry's platform.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PEPLOGIX TOP SELLERS ── -->
+<section id="peptides" class="peplogix-section">
+  <div class="container">
+    <div class="section-label">Peplogix Peptide Products</div>
+    <h2 class="section-title">Top Sellers — Men's &amp; Women's Health</h2>
+    <p class="section-sub">Curated peptide and wellness products from Peplogix, available through Urowell. Shipped directly to your door after medical review.</p>
+
+    <h3 style="font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px; margin-top: 8px;">Men's Health Top Sellers</h3>
+    <div class="peplogix-grid fade-up" style="margin-bottom: 40px;">
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">PT-141 – 10mg</div>
+        <div class="peplogix-desc">Sexual arousal and erectile function support. Clinically studied peptide for male sexual wellness.</div>
+        <div class="peplogix-price">$180 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$200</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Libido Drive Capsules – 102mg</div>
+        <div class="peplogix-desc">Comprehensive male sexual health blend: PT-141, Oxytocin, VIP, Kisspeptin.</div>
+        <div class="peplogix-price">$315 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$350</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Kisspeptin – 10mg</div>
+        <div class="peplogix-desc">Supports testosterone and LH production. Key hormone regulator for male vitality.</div>
+        <div class="peplogix-price">$135 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$150</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">NAD+ – 1000mg</div>
+        <div class="peplogix-desc">Cellular energy and longevity support. Essential for mitochondrial function and healthy aging.</div>
+        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Epithalon Capsules – Anti-Aging</div>
+        <div class="peplogix-desc">Telomere support and longevity peptide. Promotes cellular rejuvenation and healthy aging.</div>
+        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Semaglutide / GLP-1</div>
+        <div class="peplogix-desc">Clinically proven weight management. Reduces appetite and supports metabolic health.</div>
+        <div class="peplogix-price">$360 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$400</span></div>
+      </div>
+    </div>
+
+    <h3 style="font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 16px;">Women's Health Top Sellers</h3>
+    <div class="peplogix-grid fade-up">
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Libido Drive Capsules – 102mg</div>
+        <div class="peplogix-desc">Female sexual wellness blend for HSDD. PT-141, Oxytocin, VIP, Kisspeptin combination.</div>
+        <div class="peplogix-price">$315 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$350</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Oxytocin – 10mg</div>
+        <div class="peplogix-desc">Bonding and intimacy support. Enhances emotional connection and sexual wellness.</div>
+        <div class="peplogix-price">$225 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$250</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">GHK-Cu Peptide Serum + SNAP-8</div>
+        <div class="peplogix-desc">Premium anti-aging serum. Reduces fine lines, promotes collagen, and rejuvenates skin.</div>
+        <div class="peplogix-price">$180 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$200</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Epithalon Capsules – Anti-Aging</div>
+        <div class="peplogix-desc">Telomere support for longevity. Promotes cellular health and anti-aging benefits.</div>
+        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">NAD+ – 1000mg</div>
+        <div class="peplogix-desc">Cellular energy and longevity. Supports healthy aging and metabolic function for women.</div>
+        <div class="peplogix-price">$202 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$225</span></div>
+      </div>
+      <div class="peplogix-card">
+        <span class="peplogix-tag">PEPLOGIX</span>
+        <div class="peplogix-name">Semaglutide / GLP-1</div>
+        <div class="peplogix-desc">Weight management and metabolic support. Clinically proven GLP-1 receptor agonist.</div>
+        <div class="peplogix-price">$360 <span style="font-size:13px;color:var(--gray);font-weight:400;text-decoration:line-through;">$400</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── APP DOWNLOAD ── -->
+<section id="app" class="app-section">
+  <div class="container" style="text-align: center;">
+    <div class="section-label" style="color: rgba(255,255,255,0.7);">Mobile App</div>
+    <h2 class="section-title" style="color: white;">Download the Urowell App</h2>
+    <p class="section-sub" style="color: rgba(255,255,255,0.85); margin-left: auto; margin-right: auto;">Book services, manage your membership, earn rewards, and pay with Cherry or Square — all from your phone.</p>
+    <div class="app-btns">
+      <a href="https://apps.apple.com/app/id6754045941" class="app-store-btn" target="_blank">
+        <span class="store-icon">🍎</span>
+        <div class="store-text">
+          <span class="store-label">Download on the</span>
+          <span class="store-name">App Store</span>
+        </div>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.urowell.elite" class="app-store-btn" target="_blank">
+        <span class="store-icon">▶</span>
+        <div class="store-text">
+          <span class="store-label">Get it on</span>
+          <span class="store-name">Google Play</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="./assets/logo.png" alt="Urowell Logo" />
+      <div class="footer-brand-name">UROWELL</div>
+      <div class="footer-brand-sub">INTEGRATIVE CARE</div>
+      <p>Premium integrative urology and wellness services by Uro Center OC. Your wellness journey starts here.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Hair Loss</a>
+      <a href="#services">Sexual Wellness</a>
+      <a href="#services">Men's Health</a>
+      <a href="#services">Women's Health</a>
+      <a href="#services">Peptide Therapy</a>
+      <a href="#services">Regenerative Medicine</a>
+    </div>
+    <div class="footer-col">
+      <h4>Membership</h4>
+      <a href="#memberships">Silver</a>
+      <a href="#memberships">Gold</a>
+      <a href="#memberships">Platinum</a>
+      <a href="#financing">Cherry Financing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Links</h4>
+      <a href="https://apps.apple.com/app/id6754045941" target="_blank">iOS App</a>
+      <a href="https://play.google.com/store/apps/details?id=com.urowell.elite" target="_blank">Android App</a>
+      <a href="https://pay.withcherry.com/?merchantId=AJK0BO" target="_blank">Cherry Financing</a>
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Uro Center OC. All rights reserved.</p>
+    <p>Powered by <a href="https://withcherry.com" target="_blank" style="color: rgba(255,255,255,0.8);">Cherry</a> &amp; <a href="https://squareup.com" target="_blank" style="color: rgba(255,255,255,0.8);">Square</a></p>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  function toggleMenu() {
+    const links = document.getElementById('navLinks');
+    links.classList.toggle('open');
+  }
+
+  // Service category tabs
+  function showCategory(cat) {
+    document.querySelectorAll('.services-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('cat-' + cat).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
